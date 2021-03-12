@@ -3,12 +3,91 @@
 @import 'reset'
 @import 'global'
 
+.header
+  padding: 50px 0
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
 
+.logo
+  margin-right: 145px
 
+.menu
+  &__list
+    display: flex
+  &__list-item:not(:last-child)
+    margin-right: 34px   
+  &__list-link
+    @extend %rubik-500
+    font-weight: 600
+    text-decoration: none
+    font-size: 15px
+    line-height: 0.8
+    color: #436372
+    transition: color .2s
+  &__list-link:hover
+    color: #fcd7b6
 
-
-
-
-
-  
-@import 'media'
+.user-nav
+  display: flex
+  &__link-search
+    background-color: #edf1f4;
+    min-width: 50px
+    min-height: 50px
+    border-radius: 50%
+    background-image: url('../img/icons/search.svg')
+    background-repeat: no-repeat
+    background-position: center center
+    margin-right: 20px   
+  &__center
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: #fcd7b6
+    border-radius: 100px
+    min-width: 178px
+    margin-right: 18px
+    position: relative
+  &__center::before
+    content: ''
+    position: absolute
+    min-width: 1px
+    left: 50%
+    right: 50%
+    min-height: 32px
+    background-image: url('../img/icons/stick.svg')
+  &__link--heart
+    background-image: url('../img/icons/heart.png')
+    min-width: 18px
+    min-height: 18px
+    margin: 10px 0 0 40px
+    background-repeat: no-repeat
+    background-position: center center
+    position: relative
+  &__link--cart
+    background-image: url('../img/icons/cart.svg')
+    min-width: 18px
+    min-height: 18px
+    margin: 10px 43px 0 0
+    background-repeat: no-repeat
+    position: relative
+  &__center-num
+    position: absolute
+    font-size: 10px
+    line-height: 1.7
+    text-align: center
+    background-color: #fff
+    top: -8px
+    right: -10px
+    width: 16px
+    height: 16px
+    border-radius: 50%
+  &__link--menu
+    background-color: #a3bbc8;
+    min-width: 50px
+    min-height: 50px
+    border-radius: 50%
+    background-image: url('../img/icons/menu.svg')
+    background-repeat: no-repeat
+    background-position: center center
