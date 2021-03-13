@@ -28,19 +28,18 @@
     transition: color .2s
     outline: transparent
     &--active
-      color: #fcd7b6
+      color: $defold
   &__list-link:focus
-    color: #8a0f0f
+    color: $focus
   &__list-link:hover
-    color: #fcd7b6
+    color: $defold
   &__list-link:active
-    color: #fcd7b6
+    color: $defold
     
-
 .user-nav
   display: flex
   &__link-search
-    background-color: #edf1f4;
+    background-color: #edf1f4
     min-width: 50px
     min-height: 50px
     border-radius: 50%
@@ -50,13 +49,13 @@
     margin-right: 20px 
     transition: background-color .4s, transform .4s
   &__link-search:hover
-     background-color: #fcd7b6;
+     background-color: $defold
      transform: scale(1.1)
   &__center
     display: flex
     justify-content: space-between
     align-items: center
-    background-color: #fcd7b6
+    background-color: $defold
     border-radius: 100px
     min-width: 178px
     margin-right: 18px
@@ -103,7 +102,7 @@
     border-radius: 50%
     transition: background-color .4s, color .4s
   &__link--menu
-    background-color: #a3bbc8;
+    background-color: #a3bbc8
     min-width: 50px
     min-height: 50px
     border-radius: 50%
@@ -112,7 +111,7 @@
     background-position: center center
     transition: background-color .4s, transform .4s
   &__link--menu:hover
-    background-color: #fcd7b6;
+    background-color: $defold
     transform: scale(1.1)
 
 .smart  
@@ -243,7 +242,7 @@
     background-color: #fde3cc
     outline: transparent
   button:focus
-    background-color: #8a0f0f
+    background-color: $focus
   button:hover
     background-color: #fff
 .slick-active
@@ -269,7 +268,7 @@
   &__btn:not(:last-child)
     margin-right: 10px
   &__btn:focus
-    color: #8a0f0f
+    color: $focus
   &__btn:hover
     color: #1a1a1a
   &__content
@@ -289,9 +288,9 @@
     text-align: center
     width: 270px
     height: 380px
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 10px
+    background-color: rgb(255, 255, 255)
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05)
   &__img
     display: inline-block
   &__item-title
@@ -353,14 +352,14 @@
   &__contacts
     font-size: 14px
     @extend %rubik-400
-    color: #7b7b7b
+    color: $footer-word
   &__contacts-text:not(:last-child)
     margin-bottom: 5px
   &__info
     text-transform: uppercase
   &__tell
     text-decoration: none
-    color: #7b7b7b
+    color: $footer-word
   &__tell:hover
     text-decoration: underline
     color: #000
@@ -385,7 +384,7 @@
     margin-bottom: 40px
     font-size: 14px
     line-height: 1.7
-    color: #7b7b7b
+    color: $footer-word
   &__content-account
     margin-right: 105px
   &__content-services
@@ -428,7 +427,7 @@
     justify-content: space-between
     margin-top: 15px
   &__copy
-    color: #7b7b7b
+    color: $footer-word
     font-size: 14px
     line-height: 2.3
     @extend %rubik-400
