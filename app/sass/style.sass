@@ -1,7 +1,7 @@
 @import 'vars'
 @import 'fonts'
 @import 'reset'
-@import 'slick'
+@import 'libs'
 @import 'global'
 
 
@@ -263,17 +263,12 @@
     color: #8b8b8b
     transition: color .3s
     outline: transparent
-    &--active
-      color: #1a1a1a
   &__btn:not(:last-child)
     margin-right: 10px
   &__btn:focus
     color: $focus
   &__btn:hover
     color: #1a1a1a
-  &__content
-    max-width: 1240px
-    margin: 0 auto
   &__items
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr
@@ -286,11 +281,14 @@
   &__item
     position: relative
     text-align: center
-    width: 270px
     height: 380px
     border-radius: 10px
     background-color: rgb(255, 255, 255)
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05)
+  &__item-inner
+    transition: transform .6s
+  &__item-inner:hover
+    transform: scale(1.1)
   &__img
     display: inline-block
   &__item-title
@@ -338,6 +336,8 @@
   &__item-heart:hover,
   &__item-search:hover
     background-color: #fcd7b6c7
+.mixitup-control-active
+  color: #1a1a1a
 
 .footer
   padding: 80px 0 20px
