@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glee</title>
+  <title>Glee | main</title>
   <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon.png">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -52,7 +52,7 @@
           </ul>
         </nav>
         <div class="user-nav">
-          <button class="user-nav__btn-search round-btn">search</button>  
+          <button class="user-nav__btn-search round-btn">search</button>
           <button class="user-nav__btn user-nav__btn-heart">
             heart
             <span class="user-nav__num user-nav__num-heart">0</span>
@@ -118,43 +118,41 @@
             <div class="features__title">
               Support 24/7
             </div>
-            <p class="features__text">
-              Contact us 24 hours a day
-            </p>
-            <p class="features__text">
-              7 days a week
-            </p>
+            <div class="features__text">
+              <p>
+                Contact us 24 hours a day
+              </p>
+              <p>
+                7 days a week
+              </p>
+            </div>
           </div>
           <div class="features__item features__item-delivery">
             <div class="features__title">
               Delivery
             </div>
-            <p class="features__item-text">
-              Free shipping on all US order
-            </p>
+            <div class="features__text">
+              <p>
+                Free shipping on all US order
+              </p>
+            </div>
           </div>
           <div class="features__item features__item-pay">
             <div class="features__title">
               100% Payment secure
             </div>
-            <p class="features__text">
-              We ensure secure payment
-            </p>
-            <p class="features__text">
-              with PEV
-            </p>
+            <div class="features__text">
+              <p>
+                We ensure secure payment
+              </p>
+              <p>
+                with PEV
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
-
-
-
-
-
-
-
     <section class="products">
       <div class="container">
         <h2 class="products__title title">
@@ -162,39 +160,39 @@
         </h2>
         <ul class="products__filter">
           <li class="products__filter-item">
-            <button class="products__btn" type="button" data-filter="all">
+            <button class="btn-filter" type="button" data-filter="all">
               All
             </button>
           </li>
           <li class="products__filter-item">
-            <button class="products__btn" type="button" data-filter=".category-a">
+            <button class="btn-filter" type="button" data-filter=".category-a">
               Furnitures
             </button>
           </li>
           <li class="products__filter-item">
-            <button class="products__btn" type="button" data-filter=".category-b">
+            <button class="btn-filter" type="button" data-filter=".category-b">
               Chairs
             </button>
           </li>
           <li class="products__filter-item">
-            <button class="products__btn" type="button" data-filter=".category-c">
+            <button class="btn-filter" type="button" data-filter=".category-c">
               Lighting
             </button>
           </li>
           <li class="products__filter-item">
-            <button class="products__btn" type="button" data-filter=".category-d">
+            <button class="btn-filter" type="button" data-filter=".category-d">
               Decor
             </button>
           </li>
         </ul>
         <div class="products__content">
-          <div class="products__items">
-            <div class="products__item mix category-a category-d" href="#">
+          <ul class="products__items">
+            <li class="products__item mix category-a category-d" href="#">
               <div class="products__inner">
                 <img class="products__img" src="img/product-1.png" alt="armchair">
-                <a class="products__item-search products__btn-info  round-btn" href="#">search</a>
-                <button class="products__item-cart products__btn-info round-btn" type="button">cart</button>
-                <button class="products__item-heart products__btn-info round-btn" type="button">heart</button>
+                <a class="info__search info__btn round-btn" href="#">search</a>
+                <button class="info__cart info__btn round-btn" type="button">cart</button>
+                <button class="info__heart info__btn round-btn" type="button">heart</button>
                 <h3 class="products__item-title">
                   Wooden radio
                 </h3>
@@ -202,13 +200,13 @@
                   <span>$</span>29.00
                 </span>
               </div>
-            </div>
-            <div class="products__item mix category-a category-d" href="#">
+            </li>
+            <li class="products__item mix category-a category-d" href="#">
               <div class="products__inner">
                 <img class="products__img" src="img/product-2.png" alt="armchair">
-                <a class="products__item-search products__btn-info  round-btn" href="#">search</a>
-                <button class="products__item-cart products__btn-info round-btn" type="button">cart</button>
-                <button class="products__item-heart products__btn-info round-btn" type="button">heart</button>
+                <a class="info__search info__btn  round-btn" href="#">search</a>
+                <button class="info__cart info__btn round-btn" type="button">cart</button>
+                <button class="info__heart info__btn round-btn" type="button">heart</button>
                 <h3 class="products__item-title">
                   Wooden chair
                 </h3>
@@ -216,13 +214,13 @@
                   <span>$</span>29.00
                 </span>
               </div>
-            </div>
-            <div class="products__item mix category-c category-b" href="#">
+            </li>
+            <li class="products__item mix category-c category-b" href="#">
               <div class="products__inner">
                 <img class="products__img" src="img/product-3.png" alt="armchair">
-                <a class="products__item-search products__btn-info  round-btn" href="#">search</a>
-                <button class="products__item-cart products__btn-info round-btn" type="button">cart</button>
-                <button class="products__item-heart products__btn-info round-btn" type="button">heart</button>
+                <a class="info__search info__btn  round-btn" href="#">search</a>
+                <button class="info__cart info__btn round-btn" type="button">cart</button>
+                <button class="info__heart info__btn round-btn" type="button">heart</button>
                 <h3 class="products__item-title">
                   White chair
                 </h3>
@@ -230,13 +228,13 @@
                   <span>$</span>29.00
                 </span>
               </div>
-            </div>
-            <div class="products__item mix category-b category-a" href="#">
+            </li>
+            <li class="products__item mix category-b category-a" href="#">
               <div class="products__inner">
                 <img class="products__img" src="img/product-4.png" alt="armchair">
-                <a class="products__item-search products__btn-info  round-btn" href="#">search</a>
-                <button class="products__item-cart products__btn-info round-btn" type="button">cart</button>
-                <button class="products__item-heart products__btn-info round-btn" type="button">heart</button>
+                <a class="info__search info__btn  round-btn" href="#">search</a>
+                <button class="info__cart info__btn round-btn" type="button">cart</button>
+                <button class="info__heart info__btn round-btn" type="button">heart</button>
                 <h3 class="products__item-title">
                   Retro table
                 </h3>
@@ -244,13 +242,13 @@
                   <span>$</span>29.00
                 </span>
               </div>
-            </div>
-            <div class="products__item mix category-b category-c" href="#">
+            </li>
+            <li class="products__item mix category-b category-c" href="#">
               <div class="products__inner">
                 <img class="products__img" src="img/product-5.png" alt="armchair">
-                <a class="products__item-search products__btn-info  round-btn" href="#">search</a>
-                <button class="products__item-cart products__btn-info round-btn" type="button">cart</button>
-                <button class="products__item-heart products__btn-info round-btn" type="button">heart</button>
+                <a class="info__search info__btn  round-btn" href="#">search</a>
+                <button class="info__cart info__btn round-btn" type="button">cart</button>
+                <button class="info__heart info__btn round-btn" type="button">heart</button>
                 <h3 class="products__item-title">
                   Wooden radio
                 </h3>
@@ -258,13 +256,13 @@
                   <span>$</span>29.00
                 </span>
               </div>
-            </div>
-            <div class="products__item mix category-d category-c" href="#">
+            </li>
+            <li class="products__item mix category-d category-c" href="#">
               <div class="products__inner">
                 <img class="products__img" src="img/product-6.png" alt="armchair">
-                <a class="products__item-search products__btn-info  round-btn" href="#">search</a>
-                <button class="products__item-cart products__btn-info round-btn" type="button">cart</button>
-                <button class="products__item-heart products__btn-info round-btn" type="button">heart</button>
+                <a class="info__search info__btn  round-btn" href="#">search</a>
+                <button class="info__cart info__btn round-btn" type="button">cart</button>
+                <button class="info__heart info__btn round-btn" type="button">heart</button>
                 <h3 class="products__item-title">
                   Wooden chair
                 </h3>
@@ -272,13 +270,13 @@
                   <span>$</span>29.00
                 </span>
               </div>
-            </div>
-            <div class="products__item mix category-a category-c" href="#">
+            </li>
+            <li class="products__item mix category-a category-c" href="#">
               <div class="products__inner">
                 <img class="products__img" src="img/product-7.png" alt="armchair">
-                <a class="products__item-search products__btn-info  round-btn" href="#">search</a>
-                <button class="products__item-cart products__btn-info round-btn" type="button">cart</button>
-                <button class="products__item-heart products__btn-info round-btn" type="button">heart</button>
+                <a class="info__search info__btn  round-btn" href="#">search</a>
+                <button class="info__cart info__btn round-btn" type="button">cart</button>
+                <button class="info__heart info__btn round-btn" type="button">heart</button>
                 <h3 class="products__item-title">
                   White chair
                 </h3>
@@ -286,13 +284,13 @@
                   <span>$</span>29.00
                 </span>
               </div>
-            </div>
-            <div class="products__item mix category-c category-d" href="#">
+            </li>
+            <li class="products__item mix category-c category-d" href="#">
               <div class="products__inner">
-                <img class="products__img" src="img/product-8.png" alt="armchair">   
-                <a class="products__item-search products__btn-info  round-btn" href="#">search</a>
-                <button class="products__item-cart products__btn-info round-btn" type="button">cart</button>
-                <button class="products__item-heart products__btn-info round-btn" type="button">heart</button>
+                <img class="products__img" src="img/product-8.png" alt="armchair">
+                <a class="info__search info__btn  round-btn" href="#">search</a>
+                <button class="info__cart info__btn round-btn" type="button">cart</button>
+                <button class="info__heart info__btn round-btn" type="button">heart</button>
                 <h3 class="products__item-title">
                   Retro table
                 </h3>
@@ -300,55 +298,213 @@
                   <span>$</span>29.00
                 </span>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
-
-
     <section class="lamps">
       <div class="container--big">
+        <h2 class="sr-only"></h2>
         <div class="lamps__items">
-          <div class="lamps__item lamps__item-left">
-            <div class="lapms__inner">
-              <h3 class="lamps__title">
-                Mirum Notare Tellus
-              </h3>
-              <p class="lamps__text">
-                LEDCornBulid Lamp 5W 7W 10W 12W 15W E26 E27LEDCOrnLight
-              </p>
-              <button class="lamps__btn" type="button">
-                View More
-              </button>
+          <div class="lamps__item">
+            <div class="lamps__wrapper">
+              <img class="lamps__img-left" src="img/lamp-left.png" alt="lamp">
+              <div class="lapms__inner">
+                <h3 class="lamps__title">
+                  Mirum Notare Tellus
+                </h3>
+                <div class="lamps__text">
+                  <p>
+                    LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
+                  </p>
+                </div>
+                <button class="lamps__btn" type="button">
+                  View More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="9" viewBox="0 0 22 9">
+                    <path fill="#436372" fill-rule="evenodd"
+                      d="M603.3,2616.47h16.948l-0.1,2.86a0.279,0.279,0,0,0-.084.2,0.3,0.3,0,0,0,.084.21l0.172,0.17a0.276,0.276,0,0,0,.408,0l4.192-4.21a0.283,0.283,0,0,0,.084-0.2,0.307,0.307,0,0,0-.084-0.21l-4.192-4.21a0.3,0.3,0,0,0-.408,0l-0.172.17a0.3,0.3,0,0,0-.084.21,0.3,0.3,0,0,0,.084.2l0.113,2.86H603.292a0.3,0.3,0,0,0-.292.3v1.37A0.288,0.288,0,0,0,603.3,2616.47Z"
+                      transform="translate(-603 -2611)" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
           <div class="lamps__item">
-            <div class="lamps__inner">
-              <h3 class="lamps__title">
-                Malesuada Tempor Eulsmod
-              </h3>
-              <p class="lamps__text">
-                50W 8000im Compact Size for HID StreetLightReplacementLEDCornLight
-              </p>
-              <button class="lamps__btn" type="button">
-                View More
-              </button>
+            <div class="lamps__wrapper lamps__wrapper-right">
+              <img class="lamps__img-right" src="img/lamp-right.png" alt="lamp">
+              <div class="lamps__inner">
+                <h3 class="lamps__title">
+                  Malesuada Tempor Eulsmod
+                </h3>
+                <div class="lamps__text">
+                  <p>
+                    50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
+                  </p>
+                </div>
+                <button class="lamps__btn" type="button">
+                  View More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="9" viewBox="0 0 22 9">
+                    <path fill="#436372" fill-rule="evenodd"
+                      d="M603.3,2616.47h16.948l-0.1,2.86a0.279,0.279,0,0,0-.084.2,0.3,0.3,0,0,0,.084.21l0.172,0.17a0.276,0.276,0,0,0,.408,0l4.192-4.21a0.283,0.283,0,0,0,.084-0.2,0.307,0.307,0,0,0-.084-0.21l-4.192-4.21a0.3,0.3,0,0,0-.408,0l-0.172.17a0.3,0.3,0,0,0-.084.21,0.3,0.3,0,0,0,.084.2l0.113,2.86H603.292a0.3,0.3,0,0,0-.292.3v1.37A0.288,0.288,0,0,0,603.3,2616.47Z"
+                      transform="translate(-603 -2611)" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-
-
-
-
+    <section class="design">
+      <div class="container">
+        <h2 class="design__title title">
+          New Design
+        </h2>
+        <ul class="design__filter">
+          <li class="design__filter-item">
+            <button class="btn-filter" type="button" data-filter="all"> 
+              All
+            </button>
+          </li>
+          <li class="design__filter-item">
+            <button class="btn-filter" type="button" data-filter=".category-a">
+              Furnitures
+            </button>
+          </li>
+          <li class="design__filter-item">
+            <button class="btn-filter" type="button" data-filter=".category-b">
+              Chairs
+            </button>
+          </li>
+          <li class="design__filter-item">
+            <button class="btn-filter" type="button" data-filter=".category-c">
+              Lighting
+            </button>
+          </li>
+          <li class="design__filter-item">
+            <button class="btn-filter" type="button" data-filter=".category-d">
+              Decor
+            </button>
+          </li>
+        </ul>
+        <ul class="design__items">
+          <li class="design__item mix category-a category-d">
+            <div class="design__inner">
+              <h3 class="design__item-title">
+                Beat Flat Pendant Black
+              </h3>
+              <div class="design__text">
+                <p>
+                  Classic
+                </p>
+              </div>
+            </div>
+            <div class="design__wrapper">
+              <img class="design__img" src="img/design-1.png" alt="">
+            </div>
+            <a href="" class="design__info info__search info__btn round-btn">search</a>
+            <button class="design__info info__cart info__btn round-btn">cart</button>
+            <button class="design__info info__heart info__btn round-btn">heart</button>
+          </li>
+          <li class="design__item mix category-c">
+            <div class="design__inner">
+              <h3 class="design__item-title">
+                Lampe Sur Pieds Bamboo
+              </h3>
+              <div class="design__text">
+                <p>
+                  Classic
+                </p>
+              </div>
+            </div>
+            <div class="design__wrapper">
+              <img class="design__img" src="img/design-2.png" alt="">
+            </div>
+            <a href="" class="design__info info__search info__btn round-btn">search</a>
+            <button class="design__info info__cart info__btn round-btn">cart</button>
+            <button class="design__info info__heart info__btn round-btn">heart</button>
+          </li>
+          <li class="design__item mix category-c category-a category-b">
+            <div class="design__inner">
+              <h3 class="design__item-title">
+                Rattan Rocking Chair
+              </h3>
+              <div class="design__text">
+                <p>
+                  Classic
+                </p>
+              </div>
+            </div>
+            <div class="design__wrapper">
+              <img class="design__img" src="img/design-3.png" alt="">
+            </div>
+            <a href="" class="design__info info__search info__btn round-btn">search</a>
+            <button class="design__info info__cart info__btn round-btn">cart</button>
+            <button class="design__info info__heart info__btn round-btn">heart</button>
+          </li>
+          <li class="design__item mix category-d category-c">
+            <div class="design__inner">
+              <h3 class="design__item-title">
+                Rattan Rocking Chair
+              </h3>
+              <div class="design__text">
+                <p>
+                  Classic
+                </p>
+              </div>
+            </div>
+            <div class="design__wrapper">
+              <img class="design__img" src="img/design-4.png" alt="">
+            </div>
+            <a href="" class="design__info info__search info__btn round-btn">search</a>
+            <button class="design__info info__cart info__btn round-btn">cart</button>
+            <button class="design__info info__heart info__btn round-btn">heart</button>
+          </li>
+          <li class="design__item mix category-b category-a">
+            <div class="design__inner">
+              <h3 class="design__item-title">
+                Rattan Rocking Chair
+              </h3>
+              <div class="design__text">
+                <p>
+                  Classic
+                </p>
+              </div>
+            </div>
+            <div class="design__wrapper">
+              <img class="design__img" src="img/design-5.png" alt="">
+            </div>
+            <a href="" class="design__info info__search info__btn round-btn">search</a>
+            <button class="design__info info__cart info__btn round-btn">cart</button>
+            <button class="design__info info__heart info__btn round-btn">heart</button>
+          </li>
+          <li class="design__item mix category-d category-d category-c">
+            <div class="design__inner">
+              <h3 class="design__item-title">
+                Lampe Sur Pieds Banboo
+              </h3>
+              <div class="design__text">
+              <p>
+                 Classic
+              </p>
+              </div>
+            </div>
+            <div class="design__wrapper">
+              <img class="design__img" src="img/design-6.png" alt="">
+            </div>
+            <a href="" class="design__info info__search info__btn round-btn">search</a>
+            <button class="design__info info__cart info__btn round-btn">cart</button>
+            <button class="design__info info__heart info__btn round-btn">heart</button>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <div class="footer__contacts">
+        <address class="footer__contacts">
           <a class="logo footer__img" href="#">
             <img class="logo__img" src="img/logo.png" alt="logo">
           </a>
@@ -367,7 +523,7 @@
               <span class="footer__info">Email</span>:contacts@Glee.com
             </p>
           </div>
-        </div>
+        </address>
         <div class="footer__content footer__content-services">
           <div class="footer__title">
             Services
@@ -458,7 +614,7 @@
             </li>
             <li class="footer__menu-item">
               <a href="" class="footer__menu-link">
-                About 
+                About
               </a>
             </li>
             <li class="footer__menu-item">
