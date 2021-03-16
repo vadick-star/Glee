@@ -2,19 +2,32 @@ body
   font-size: 16px
   line-height: 1.9
   background-color: #fff
+  color: #1a1a1a
   @extend %dmsans-700
-  
-.container-big
-  max-width: 1800px
-  margin: 0 auto
-  padding: 0 15px
 
 .container
   max-width: 1200px
   margin: 0 auto
   padding: 0 15px
+  &--big
+    max-width: 1800px
+    margin: 0 auto
+    padding: 0 15px
 
 .title
   @extend %dmsans-700
   font-size: 36px
   color: #191919
+
+.round-btn
+  border-radius: 50%
+  border: none
+  outline: transparent
+  background-repeat: no-repeat
+  background-position: center center
+  cursor: pointer
+  transition: background-color .4s, transform .4s
+  font-size: 0
+
+.round-btn:focus
+  background-color: $focus
