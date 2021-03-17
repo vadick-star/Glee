@@ -421,6 +421,8 @@
     @extend %line-clamp
 
   &__btn
+    display: block
+    text-decoration: none
     border: none
     background-color: #fff
     margin-bottom: 85px
@@ -568,6 +570,8 @@
     transition: border-color .2s
     &:hover
       border-color: #262626
+    &:focus
+      color: $focus
     &::before
       content: ''
       position: absolute
