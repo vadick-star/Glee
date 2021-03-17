@@ -1,8 +1,12 @@
 $(function(){
-  $('.main-slider__list').slick({
+  $('.main-slider__list, .partners__slider').slick({
     arrows: false,
     dots: true
   });
+
+  // $('.partners__slider').slick({
+  //   arrows: false
+  // });
 
   var mixer = mixitup('.products__items');
 
