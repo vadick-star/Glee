@@ -14,7 +14,7 @@ function browsersync() {
       baseDir: 'app/'
     },
     notofy: false
-  })
+  });
 }
 
 function styles() {
@@ -26,7 +26,7 @@ function styles() {
       grid: true
     }))
     .pipe(dest('app/css'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 }
 
 function scripts() {
@@ -34,12 +34,13 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/mixitup/dist/mixitup.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
   .pipe(uglify())
   .pipe(dest('app/js'))
-  .pipe(browserSync.stream())
+  .pipe(browserSync.stream());
 }
 
 function images() {
@@ -55,7 +56,7 @@ function images() {
         ]
       })
     ]))
-  .pipe(dest('dist/img'))
+  .pipe(dest('dist/img'));
 }
 
 function build() {
@@ -64,17 +65,17 @@ function build() {
     'app/css/style.min.css',
     'app/js/main.min.js'
   ], {base: 'app'})
-  .pipe(dest('dist'))
+  .pipe(dest('dist'));
 }
 
 function cleanDist() {
-  return del('dist')
+  return del('dist');
 }
 
 function watching() {
   watch(['app/sass/**/*.sass'], styles);
-  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts)
-  watch(['app/**/*.html']).on('change', browserSync.reload)
+  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
+  watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
 exports.styles = styles;
