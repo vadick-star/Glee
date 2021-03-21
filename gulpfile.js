@@ -14,7 +14,8 @@ function browsersync() {
     server: {
       baseDir: 'app/'
     },
-    notofy: false
+    port: 3000,
+    notify: false
   });
 }
 

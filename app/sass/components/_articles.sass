@@ -43,9 +43,13 @@
     width: 370px
     border-radius: 5px
     margin-bottom: 30px
-    transition: box-shadow .6s
+    transition: box-shadow .5s
     &:hover
       box-shadow: 0px 0px 0px 5px rgba(37, 37, 37, 0.2)
+    &:hover .articles__inner::before
+      background-color: $btn-dark
+    &:hover .articles__date
+      border-color: rgba(37, 37, 37, 1)
 
   &__link
     text-decoration: none
@@ -58,7 +62,7 @@
       left: 0
       right: 0
       z-index: -1
-      height: 40%
+      height: 460px
 
   &__content
     position: relative
@@ -90,8 +94,8 @@
       left: 25px
       padding: 2px 0
       top: -17px
-      z-index: 100
       border-radius: 20px
+      transition: background-color .5s
       
   &__img
     border-top-left-radius: 5px
@@ -123,6 +127,7 @@
     line-height: 2.5
     text-transform: uppercase
     color: #222933
+    transition: border-color .5s
 
   &__admin 
     margin-left: 30px

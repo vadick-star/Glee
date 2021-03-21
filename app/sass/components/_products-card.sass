@@ -11,11 +11,13 @@
       border-radius: 10px
       background-color: rgb(255, 255, 255)
       box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05)
-      transition: box-shadow .6s
+      transition: box-shadow .5s
       &:hover
         box-shadow: 0px 0px 0px 5px rgba(37, 37, 37, 0.2)
       &:hover .round-btn
         opacity: 1
+        transform: translateX(0%)
+        transform: scale(1)
 
     &__inner
       position: absolute
@@ -39,7 +41,9 @@
       width: 45px
       z-index: 10
       height: 45px
+      transform: scale(0)
       opacity: 0
+      transition: transform .3s, opacity .6s, background-color .4s
   
     &__cart
       background-color: rgb(255, 255, 255)
@@ -54,6 +58,7 @@
     &__search
       left: 49px
       background-color: rgb(255, 255, 255)
+      transform: translateX(-250%)
       box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
 
       svg
@@ -67,6 +72,7 @@
     &__heart
       right: 49px
       background-color: rgb(255, 255, 255)
+      transform: translateX(100px)
       box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
 
     &__img
