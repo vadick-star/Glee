@@ -57,6 +57,7 @@
       margin-bottom: 10px
       border: 1px solid #b3b7b5
       background-color: transparent
+      transition: color .4s, background-color .4s
       color: #436372
 
       svg
@@ -89,14 +90,12 @@
         display: block
 
       &__item
-        margin: 0 auto
+        display: flex
+        align-items: center
         &:not(:last-child)
           margin-right: auto
           margin-bottom: 40px
-
-      &__wrapper
-        margin: 0 auto
-
+        
     @media(max-width: 767px)
 
       &__img
