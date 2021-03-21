@@ -1,3 +1,8 @@
+%line-clamp
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  overflow: hidden
+  
 body
   font-size: 16px
   line-height: 1.9
@@ -9,74 +14,86 @@ body
   max-width: 1200px
   margin: 0 auto
   padding: 0 15px
-  &--big
-    max-width: 1800px
-    margin: 0 auto
-    padding: 0 15px
+
+.container-big
+  max-width: 1800px
+  margin: 0 auto
+  padding: 0 15px
 
 .title
   @extend %dmsans-700
   font-size: 36px
   color: #191919
 
+.btn
+  display: block
+  text-decoration: none
+  border: none
+  @extend %rubik-500
+  color: #fff
+  cursor: pointer
+  border-radius: 0px
+  position: relative
+  outline: transparent
+  transition: border-color .4s, background-color .4s
+  &:focus
+    background-color: $focus !important
+  &:hover
+    background-color: $btn-dark !important
+  &:active
+    background-color: $active !important
+
 .round-btn
   border-radius: 50%
   border: none
+  width: 50px
+  height: 50px
   outline: transparent
-  background-repeat: no-repeat
-  background-position: center center
   cursor: pointer
-  transition: background-color .4s, transform .4s
+  transition: background-color .4s, transform .4s, opacity .6s
   font-size: 0
 
-.round-btn:focus
-  background-color: $focus
+  svg
+    transition: fill .4s
 
-.btn-filter
-  border: none
-  background-color: transparent
-  color: #8b8b8b
-  transition: color .3s
-  outline: transparent
   &:focus
-    color: $focus
+    background-color: $focus !important
   &:hover
-    color: #1a1a1a
+    background-color: #a3bbc8 !important
+    svg
+      fill: #fff !important
+  &:active
+    background-color: $active !important
 
-.info
-  &-btn
-    position: absolute
-    bottom: 120px
-    width: 45px
-    z-index: 10
-    height: 45px
-    transition: opacity .6s, background-color .5s
-    opacity: 0
+.mix
+  &__top
+    padding: 65px 0 50px 0
 
-  &-cart
-    background-image: url('../img/icons/products-cart.svg')
-    background-color: #a3bbc8
-    right: 0
-    left: 0
-    margin: 0 auto
+  &__title
+    margin-bottom: 10px
+    text-align: center
+
+  &__btn
+    border: none
+    background-color: transparent
+    color: #8b8b8b
+    transition: color .3s
+    outline: transparent
+    &:focus
+      color: $focus
     &:hover
-      background-color: $btn-dark
+      color: #1a1a1a
+    &:active
+      color: $active
 
-  &-search
-    background-image: url('../img/icons/products-search.svg')
-    left: 49px
-    background-color: rgb(255, 255, 255)
-    box-shadow: 0px 50px 47px 50px rgba(37, 37, 37, 0.05)
-    &:hover
-      background-color: $defold
+  &__filter
+    text-align: center
+    margin-bottom: 76px !important
 
-  &-heart
-    background-image: url('../img/icons/products-heart.svg')
-    right: 49px
-    background-color: rgb(255, 255, 255)
-    box-shadow: 0px 50px 47px 50px rgba(37, 37, 37, 0.05)
-    &:hover
-      background-color: $defold
-  
+  &__item
+    display: inline-block
+    &:not(:last-child)
+      margin-right: 10px
+
 .mixitup-control-active
   color: #1a1a1a

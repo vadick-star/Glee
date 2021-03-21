@@ -1,0 +1,122 @@
+.features
+  &__items
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    background-color: #fef7f0
+    min-height: 170px
+
+  &__item
+    position: relative
+
+  .features-support
+    height: 170px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    border-right: 1px solid #e8e4df
+    padding-right: 145px
+    padding-left: 75px
+    margin-left: 145px
+    &::before
+      content: ''
+      position: absolute
+      background-image: url('../img/icons/support.svg')
+      background-repeat: no-repeat
+      min-width: 50px
+      min-height: 60px
+      left: 0
+      top: 45px
+
+  .features-delivery
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 170px
+    border-right: 1px solid #e8e4df
+    padding-right: 155px
+    padding-left: 80px
+    &::before
+      content: ''
+      position: absolute
+      background-image: url('../img/icons/delivery.svg')
+      background-repeat: no-repeat
+      min-width: 60px
+      min-height: 60px
+      left: 0
+      top: 65px
+
+  .features-pay
+    padding-left: 90px
+    margin-right: 160px
+    &::before
+      content: ''
+      position: absolute
+      background-image: url('../img/icons/pay.svg')
+      background-repeat: no-repeat
+      min-width: 60px
+      min-height: 60px
+      left: 0
+      top: 10px
+
+  &__title
+    max-width: 190px
+    font-size: 18px
+    line-height: 2.2
+    -webkit-line-clamp: 1
+    @extend %line-clamp
+    color: #414141
+
+  &__text
+    max-width: 250px
+    @extend %dmsans-400
+    -webkit-line-clamp: 3
+    @extend %line-clamp
+    color: #585858
+
+  @media(max-width: 1550px)
+
+    .features-support
+      padding-right: 50px
+      margin-left: 80px
+
+    .features-delivery
+      padding-right: 50px
+
+    .features-pay
+      margin-right: 80px
+
+  @media(max-width: 1200px)
+
+    .features-support
+      padding-right: 30px
+      margin-left: 10px
+
+    .features-delivery
+      padding-right: 10px
+
+    .features-pay
+      margin-right: 10px
+
+  @media(max-width: 991px)
+
+    &__item
+      padding: 0 !important
+      border-right: none !important
+      text-align: center
+      &::before
+        display: none
+
+  @media(max-width: 767px)
+
+    &__items
+      overflow: auto
+
+    &__item
+      margin-right: 50px
+      min-width: 240px
+
+    &__title,
+    &__text
+      margin: 0 auto

@@ -1,0 +1,118 @@
+.furniture
+    padding-top: 135px
+
+    &__items
+      display: flex
+      justify-content: space-between
+
+    &__item
+      max-width: 870px
+      min-height: 390px
+      width: 100%
+      background-color: #feefe2
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: flex-end
+      &:not(:last-child)
+        margin-right: 20px
+
+    &__wrapper
+      position: relative
+      margin-right: 90px
+
+    &__inner
+      margin: 0 20px
+
+    &__img
+      position: absolute
+      top: -200px
+      left: -250px
+      max-width: 240px;
+      max-height: 450px;
+
+    &__title
+      max-width: 250px
+      margin-top: 10px
+      margin-bottom: 15px
+      color: #243f4d
+      font-size: 26px
+      line-height: 1.2
+      @extend %dmsans-700
+      -webkit-line-clamp: 3
+      @extend %line-clamp
+
+    &__text
+      max-width: 360px
+      margin-bottom: 25px
+      color: #243f4d
+      -webkit-line-clamp: 4
+      @extend %line-clamp
+
+    &__btn
+      width: 180px
+      padding: 15px 0 15px 20px
+      border-radius: 4px
+      margin-bottom: 10px
+      border: 1px solid #b3b7b5
+      background-color: transparent
+      color: #436372
+
+      svg
+        margin-left: 35px
+
+      path
+        transition: fill .4s
+
+      &:hover
+        border-color: #fff
+        background-color: $btn-dark
+        color: #fff
+        path
+          fill: #fff
+  
+    @media(max-width: 1550px)
+
+      &__wrapper
+        margin-right: 20px
+
+      &__img
+        height: 270px
+        top: -50px
+        left: -170px
+        max-width: 180px;
+
+    @media(max-width: 1200px)
+
+      &__items
+        display: block
+
+      &__item
+        margin: 0 auto
+        &:not(:last-child)
+          margin-right: auto
+          margin-bottom: 40px
+
+      &__wrapper
+        margin: 0 auto
+
+    @media(max-width: 767px)
+
+      &__img
+        display: none
+
+    @media(max-width: 575px)
+
+      &__item:not(:last-child)
+          margin-bottom: 15px
+
+      &__title
+        font-size: 23px
+
+      &__text
+        font-size: 14px
+        max-width: 230px
+
+      &__btn
+        padding: 12px 0 12px 27px

@@ -1,0 +1,269 @@
+.header 
+  padding: 50px 0
+
+  &__inner 
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__logo
+    margin-right: 145px
+
+  .logo__img
+    max-height: 100px
+
+  @media(max-width: 1200px) 
+
+    &__logo
+      margin-right: 0
+
+  @media(max-width: 991px)
+
+    &__logo
+      position: relative
+      z-index: 3
+
+  .menu 
+    &__list
+      display: flex
+
+    &__item:not(:last-child)
+      margin-right: 34px   
+
+    &__link
+      @extend %rubik-500
+      text-decoration: none
+      font-size: 15px
+      line-height: 0.8
+      color: #436372
+      transition: color .2s
+      outline: transparent
+      &--active
+        color: $default
+      &:focus
+        color: $focus
+      &:hover
+        color: $default
+      &:active
+        color: $active
+  
+    &__btn
+      display: none
+      border: none
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      z-index: 5
+      right: 0
+      top: 0
+      bottom: 0
+      outline: transparent
+      margin: auto 0
+      position: relative
+      background-color: $default
+      transition: background-color 1s
+      &--active
+        background-color: transparent
+
+    &__burger
+      position: absolute
+      background-color: #fff
+      right: 0
+      left: 0
+      top: 0
+      bottom: 0
+      border-radius: 40px
+      margin: auto
+      width: 30px
+      height: 4px
+      &::before,
+      &::after
+        content: ''
+        position: absolute
+        border-radius: 40px
+        width: 30px
+        height: 4px
+        background-color: #fff
+      &::before
+        top: -9px
+        right: 0
+      &::after
+        bottom: -9px
+        right: 0
+
+    @media(max-width: 1200px)
+
+      &__item:not(:last-child)
+        margin-right: 20px
+    
+    @media(max-width: 991px)
+
+      &__btn
+        display: block
+      
+      &__list
+        display: block
+        position: absolute
+        z-index: 2
+        right: 0
+        top: 0
+        left: 0
+        text-align: center
+        border-radius: 10px
+        padding: 200px 0 20px
+        background-color: #c4c4c4
+        transform: translateX(-100%)
+        opacity: 0
+        transition: transform 1s, opacity 3s
+        &--active 
+          transform: translateX(0)
+          opacity: 1
+
+      &__item:not(:last-child)
+        margin-right: 0
+
+      &__link
+        display: block
+        padding: 20px 0
+        font-size: 17px
+
+  .user-nav
+    display: flex
+
+    .search
+      width: 16px
+      height: 16px
+      fill: #243f4d
+
+    .round-btn:hover .search
+      fill: #fff
+
+    &__btn-search
+      background-color: #edf1f4
+      margin-right: 20px
+      min-width: 50px
+      min-height: 50px 
+    
+    &__btn
+      width: 90px
+      background-color: $default
+      border: none
+      border-radius: 0
+      outline: transparent
+      transition: background-color .4s
+      position: relative
+      font-size: 0
+      &:focus
+        background-color: $focus
+      &:hover
+        background-color: #f8be8b
+      &:active
+        background-color: $active
+
+    .btn-heart
+      border-top-left-radius: 100px
+      border-bottom-left-radius: 100px
+      background-image: url('../img/icons/heart.png')
+      min-width: 18px
+      min-height: 18px
+      background-repeat: no-repeat
+      background-position: 41px 22px
+      &::before
+        content: ''
+        position: absolute
+        background-image: url('../img/icons/stick.svg')
+        width: 1px
+        height: 30px
+        top: 20%
+        right: 0
+
+    .btn-cart
+      border-top-right-radius: 100px
+      border-bottom-right-radius: 100px
+      margin-right: 18px
+      background-image: url('../img/icons/cart.svg')
+      min-width: 18px
+      min-height: 18px
+      background-repeat: no-repeat
+      background-position: 27px 21px
+      &::before
+        content: ''
+        position: absolute
+        background-image: url('../img/icons/stick.svg')
+        width: 1px
+        height: 30px
+        left: 0
+        top: 20%
+
+    &__btn:hover .user-nav__num
+      background-color: #4d4747d5
+      color: #fff
+
+    &__btn-menu
+      background-color: #edf1f4
+
+    .menu
+      width: 22px
+      height: 22px
+
+      path
+        fill: #243f4d
+
+    &__num
+      position: absolute
+      font-size: 10px
+      line-height: 1.7
+      background-color: #fff
+      padding: 0 6px
+      border-radius: 50%
+      transition: background-color .4s, color .4s
+
+    .num-heart
+      top: 12px
+      right: 22px
+
+    .num-cart
+      top: 12px
+      right: 36px
+
+    @media(max-width: 1200px)
+
+      &__btn-search,
+      &__btn-cart
+        margin-right: 10px
+
+    @media(max-width: 991px)
+
+      &
+        position: absolute
+        transform: translateY(-340%)
+        opacity: 0
+        right: 0
+        left: 0
+        display: flex
+        justify-content: center
+        top: 120px
+        z-index: 4
+        transition: transform 1s, opacity 3s
+        &--active
+          opacity: 1
+          transform: translateY(0%)
+
+      &__btn-menu,
+      &__btn-search
+        min-width: 50px
+        min-height: 50px
+        z-index: 4
+        
+      &__btn-heart
+        background-position: 35px 22px
+
+      &__btn
+        z-index: 4
+        width: 75px
+
+      &__num-cart
+        right: 20px
+
+      &__num-heart
+        right: 12px

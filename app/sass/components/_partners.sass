@@ -1,0 +1,42 @@
+.partners
+  background-color: #fef7f0
+  
+  .slick-track
+    display: flex
+    align-items: center
+
+  .slick-slide
+    text-align: center
+    max-width: 250px
+    margin-right: 21px
+
+  &__item
+    margin: 65px 0 90px
+    
+  &__img
+    margin: 0 auto
+    max-width: 200px
+    max-height: 200px
+
+  @media(max-width: 991px) 
+
+    .slick-slide
+      width: 100px
+    
+    &__img
+      width: 100px
+      max-height: 100px
+
+  @media(max-width: 767px)
+
+    .slick-slide
+      width: 80px
+
+    &__img
+      width: 80px
+      max-height: 80px
+
+  @media(max-width: 575px)
+
+    &
+      display: none
