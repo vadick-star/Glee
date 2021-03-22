@@ -9,7 +9,333 @@
 @import index/design
 @import index/video
 @import components/header
+@import components/top
 @import components/products-card
 @import components/partners
 @import components/articles
 @import components/footer
+
+
+.experience
+  margin: 100px 0 64px
+
+  &__inner
+    padding: 135px 0
+    background-repeat: no-repeat
+    background-position-x: left
+
+  &__content
+    max-width: 551px
+    margin-left: auto
+
+  &__working
+    display: flex
+    margin-bottom: 27px
+  
+  &__working-num
+    @extend %rubik-700
+    font-size: 140px
+    line-height: 0.2
+    color: #a3bbc8
+    margin-right: 20px
+
+  &__working-text
+    display: block
+    margin-top: -20px
+    color: #3d525e
+    @extend %rubik-400
+    max-width: 80px
+
+  &__title
+    color: #243f4d
+    margin-bottom: 20px
+
+  &__text
+    @extend %rubik-400
+    color: #243f4d
+    padding-bottom: 60px
+    margin-bottom: 30px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      height: 2px
+      width: 500px
+      background-color: #ebeef3
+      bottom: 0
+      left: 0
+
+  &__items
+    display: flex
+
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: center
+    min-height: 80px
+    padding-left: 57px
+    position: relative
+    &:not(:last-child)
+      border-right: 1px solid #ebeef3
+      padding-right: 28px
+      margin-right: 28px
+      height: 100%
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      background-repeat: no-repeat
+      top: 16px
+
+    &--projects::before
+      background-image: url('../img/icons/projects.svg')
+      width: 38px
+      height: 38px
+
+    &--revenue::before
+      background-image: url('../img/icons/revenue.svg')
+      width: 42px
+      height: 42px
+      left: -6px
+
+    &--awards::before
+      background-image: url('../img/icons/awards.svg')
+      width: 42px
+      height: 42px
+
+  &__item-num
+    font-size: 36px
+    line-height: 1
+    color: #243f4d
+
+  &__item-text
+    color: #4c4c4c
+    line-height: 1.1
+
+  @media(max-width: 1200px)
+
+    &__inner
+      background-image: none !important
+
+    &__content
+      margin: 0 auto
+
+  @media(max-width: 575px)
+
+    &
+      margin: 40px 0
+
+    &__inner
+      padding: 40px 0
+
+    &__items
+      display: block
+
+    &__title
+      font-size: 28px
+      line-height: 1.1
+
+    &__text
+      &::before
+        width: 280px
+        right: 0
+        left: 0
+        margin: 0 auto
+
+    &__item
+      text-align: center
+      margin: 0 auto
+      padding-left: 0
+      max-width: 200px
+      &:not(:last-child)
+        border-right: none
+        border-bottom: 1px solid #ebeef3
+        padding-bottom: 10px
+        margin-bottom: 10px
+        padding-right: 0
+        margin-right: auto
+
+.info
+  padding: 85px 0 71px
+  background-color: $default
+
+  &__items
+    display: flex
+    justify-content: space-around
+
+  &__item
+    text-align: center
+
+  &__title
+    font-size: 36px
+    line-height: 0.9
+    color: #243f4d
+    padding-top: 85px
+    margin-bottom: 15px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      background-repeat: no-repeat
+      top: 0
+      left: 0
+      right: 0
+      margin: 0 auto
+      width: 67px
+    &::after
+      content: ''
+      position: absolute
+      background-color: rgba(118, 164, 189, 0.5);
+      border-radius: 50%
+      height: 35px
+      width: 35px
+      top: 30px
+      right: 44px
+
+    &--satisfied::before
+      background-image: url('../img/icons/satisfied.svg')
+      height: 57px
+      top: 4px
+
+    &--products::before
+      background-image: url('../img/icons/products.svg')
+      height: 57px
+      top: 12px
+
+    &--daily::before
+      background-image: url('../img/icons/daily.svg')
+      height: 64px
+
+    &--brands::before
+      background-image: url('../img/icons/brands.svg')
+      height: 64px
+      
+  &__text
+    font-size: 18px
+    line-height: 1.8
+    color: #243f4d
+
+  @media(max-width: 767px)
+
+    &__items
+      display: grid
+      grid-template-columns: 150px 150px
+
+.team
+  padding-top: 120px
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+
+  &__box
+    max-width: 320px
+
+  &__title
+    margin-top: -16px
+    color: #243f4d
+    margin-bottom: 10px
+
+  &__text
+    color: #243f4d
+    margin-bottom: 35px
+    @extend %rubik-400
+
+  &__btn
+    background-color: #a3bbc8
+    width: 170px
+    padding: 12px 0 12px 18px
+    font-size: 14px
+    border: none
+    border-radius: 5px
+    @extend %Poppins-SemiBold-600
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      background-image: url('../img/icons/team-btn-arrow.svg')
+      width: 15px
+      height: 11px
+      top: 20px
+      right: 26px
+
+  &__items
+    display: grid
+    grid-template-columns: 370px 370px 
+    grid-gap: 40px 30px
+
+  &__img
+    width: 370px
+    height: 318px
+    object-fit: cover
+
+  &__inner
+    padding: 25px 0
+    position: relative
+    display: flex
+    background-color: #fff
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05)
+    max-width: 325px
+    margin-top: -47px
+    
+  &__info
+    padding-left: 25px
+
+  &__info-title
+    color: #436372
+    font-size: 22px
+    line-height: 1.2
+    margin-bottom: 5px
+
+  &__info-text
+    color: #565872
+    @extend %rubik-400
+
+  &__instagram,
+  &__google
+    height: 41px
+    width: 41px
+    margin-top: 11px
+    background-color: #f6f6f6
+    position: relative
+    svg
+      position: absolute
+      right: 0
+      left: 0
+      top: 0
+      bottom: 0
+      margin: auto
+
+  &__instagram
+    margin-left: 57px
+    margin-right: 7px
+
+  @media(max-width: 1200px)
+
+    &__wrapper
+      display: block
+
+    &__box
+      max-width: 700px
+      margin: 0 auto 50px auto
+
+    &__content
+      display: flex
+      justify-content: center
+
+  @media(max-width: 991px)
+    &__items
+      grid-template-columns: 280px
+
+    &__img
+      width: 280px
+
+    &__inner
+      padding: 5px 0
+
+    &__info
+      padding-left: 10px
+
+    &__instagram
+      margin-left: 25px
+      margin-right: 20px

@@ -91,7 +91,7 @@ function watching() {
   watch(['app/sass/**/*.sass'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
-  watch('app/img/**.svg', sprite);
+  // watch('app/img/**.svg', sprite);
 }
 
 exports.styles = styles;
