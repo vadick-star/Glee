@@ -1,9 +1,13 @@
 $default: #fcd7b6
-$focus: #fc3e3e7c
+$focus: #b42b2b
 $footer-word: #7b7b7b
 $btn-dark: #6c7c85
 $active: #b69b83
-  
+
+%line-clamp
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  overflow: hidden
   
 %dmsans-700
   font-family: 'DMSans'
@@ -29,6 +33,30 @@ $active: #b69b83
   font-family: 'Rubik'
   font-weight: 400
 
-%Poppins-SemiBold-600
-  font-family: 'Poppins-SemiBold'
+%Poppins-600
+  font-family: 'Poppins'
   font-weight: 600
+
+@mixin _1550
+  @media (max-width: 1550px)
+    @content
+
+@mixin _1200
+  @media (max-width: 1200px)
+    @content
+
+@mixin _991
+  @media (max-width: 991px)
+    @content
+
+@mixin _767
+  @media (max-width: 767px)
+    @content
+
+@mixin _575
+  @media (max-width:  575px)
+    @content
+
+@mixin h_540
+  @media (max-height:  540px)
+    @content

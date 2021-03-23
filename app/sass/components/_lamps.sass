@@ -1,0 +1,83 @@
+.lamps
+  margin-right: 90px
+  display: flex
+  align-items: center
+
+  @include _1550
+    margin-right: 20px
+
+  @include _575
+    display: block
+
+  &__inner
+    margin: 0 20px
+
+  &__img
+    margin-top: -180px
+    margin-right: 13px
+    max-width: 240px
+    max-height: 450px
+
+    @include _1550
+      height: 270px
+      top: -50px
+      left: -170px
+      max-width: 180px
+
+    @include _991
+      margin-top: 0
+
+    @include _767
+      margin: 0 auto
+      margin-top: 10px
+  &__title
+    max-width: 250px
+    margin-top: 10px
+    margin-bottom: 15px
+    color: #243f4d
+    font-size: 26px
+    line-height: 1.2
+    @extend %dmsans-700
+    -webkit-line-clamp: 3
+    @extend %line-clamp
+
+    @include _575
+      font-size: 23px
+
+  &__text
+    max-width: 360px
+    margin-bottom: 25px
+    color: #243f4d
+    -webkit-line-clamp: 4
+    @extend %line-clamp
+
+    @include _575
+      font-size: 14px
+      max-width: 230px
+
+  &__btn
+    min-width: 180px
+    padding: 15px 0 15px 20px
+    border-radius: 4px
+    margin-bottom: 10px
+    border: 1px solid #b3b7b5
+    background-color: transparent
+    transition: color .4s, background-color .4s
+    color: #436372
+
+    @include _575
+      padding: 12px 0 12px 27px
+
+    svg
+      margin-left: 35px
+
+    path
+      transition: fill .4s
+
+    &:hover
+      border-color: #fff
+      background-color: $btn-dark
+      color: #fff
+
+      path
+        fill: #fff

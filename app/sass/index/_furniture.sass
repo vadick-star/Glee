@@ -1,0 +1,35 @@
+.furniture
+  padding-top: 135px
+
+  &__items
+    display: flex
+    justify-content: space-between
+
+    @include _1200
+      display: block
+
+  &__item
+    max-width: 870px
+    min-height: 390px
+    width: 100%
+    background-color: #feefe2
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-end
+    
+    &:not(:last-child)
+      margin-right: 20px
+
+      @include _1200
+        margin-right: auto
+        margin-bottom: 40px
+
+      @include _575
+        margin-bottom: 15px
+
+    @include _1200
+      margin: 0 auto
+      display: flex
+      align-items: center

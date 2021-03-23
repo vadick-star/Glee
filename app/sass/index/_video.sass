@@ -7,6 +7,9 @@
   background-position: center center
   position: relative
 
+  @include _575
+    height: 300px
+
   &__link 
     position: absolute
     left: 0
@@ -17,6 +20,7 @@
     display: flex
     justify-content: center
     align-items: center
+
     &::before
       content: ''
       position: absolute
@@ -26,6 +30,7 @@
       border-radius: 50%
       background-color: #a3bbc8
       transition: background-color .4s
+
     &::after
       content: ''
       position: absolute
@@ -35,15 +40,6 @@
       z-index: -2
       border-radius: 50%
       background-color: rgba(163,187,200,.4)
+      
     &:hover::before
       background-color: $btn-dark
-
-  .video__play
-    width: 22px
-    height: 25px
-    fill: #fff
-
-  @media(max-width: 575px)
-
-    &
-      min-height: 300px

@@ -10,6 +10,15 @@
     max-width: 250px
     margin-right: 21px
 
+    @include _991
+      width: 100px
+
+    @include _767
+      width: 80px
+
+    @include _575
+      max-width: 600px
+
   &__item
     margin: 55px 0 80px
     
@@ -18,28 +27,13 @@
     max-width: 200px
     max-height: 200px
 
-  @media(max-width: 991px) 
-
-    .slick-slide
-      width: 100px
-    
-    &__img
+    @include _991
       width: 100px
       max-height: 100px
 
-  @media(max-width: 767px)
-
-    .slick-slide
-      width: 80px
-
-    &__img
+    @include _767
       width: 80px
       max-height: 80px
 
-  @media(max-width: 575px)
-
-    .slick-slide
-      max-width: 600px
-
-    &__img 
-      transform: scale(1.5)
+    @include _575
+      transform: scale(1.5)    

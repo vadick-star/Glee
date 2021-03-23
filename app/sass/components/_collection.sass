@@ -1,0 +1,49 @@
+.collection
+  padding: 40px 0 0 40px
+  overflow: hidden
+  border-radius: 4px
+  min-height: 250px
+  background-color: #f8f8f8
+  position: relative
+  transition: box-shadow .6s
+
+  &:hover
+    box-shadow: 0px 0px 0px 5px rgba(37, 37, 37, 0.2)
+
+    .info-btn
+      opacity: 1
+
+  &__inner
+    position: relative
+    z-index: 5
+
+  &__item-title
+    max-width: 175px
+    font-size: 20px
+    color: #1a1a1a
+    margin-bottom: 10px
+    line-height: 1.2
+    -webkit-line-clamp: 2
+    @extend %line-clamp
+  
+  &__text
+    color: #a3bbc8
+    width: 200px
+    -webkit-line-clamp: 1
+    @extend %line-clamp
+
+  &__img-wrapper
+    display: flex
+    justify-content: center
+    position: absolute
+    right: 0
+    left: 0
+    bottom: 40px
+    margin-left: 170px
+    z-index: 1
+
+  &__img
+    max-width: 350px
+
+  &__info
+    margin-bottom: -60px

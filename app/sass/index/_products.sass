@@ -1,0 +1,43 @@
+.products
+  &__top
+    padding: 65px 0 50px 0
+
+  &__title
+    margin-bottom: 10px
+    text-align: center
+
+  &__card-content
+    @include _1200
+      display: flex
+      justify-content: center
+
+  &__card-items
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-gap: 40px 37px
+
+    @include _1200
+      grid-template-columns: 250px 250px
+
+    @include _575
+      grid-template-columns: 250px
+
+  &__card-item
+    overflow: hidden
+    position: relative
+    min-height: 380px
+    border-radius: 10px
+    background-color: rgb(255, 255, 255)
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05)
+    transition: box-shadow .5s
+    
+    &:hover
+      box-shadow: 0px 0px 0px 5px rgba(37, 37, 37, 0.2)
+
+      @include _575
+        box-shadow: none
+
+    &:hover .round-btn
+      opacity: 1
+      transform: translateX(0%)
+      transform: scale(1)       

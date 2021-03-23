@@ -3,18 +3,23 @@
 @import reset
 @import libs
 @import global
-@import index/main-slider
-@import index/features
-@import index/products-furniture
-@import index/design
-@import index/video
+
 @import components/header
 @import components/top
-@import components/products-card
+@import components/card
+@import components/lamps
+@import components/collection
+@import components/fancybox
 @import components/partners
 @import components/articles
 @import components/footer
 
+@import index/main-slider
+@import index/features
+@import index/furniture
+@import index/design
+@import index/products
+@import index/video
 
 .experience
   margin: 100px 0 64px
@@ -56,6 +61,7 @@
     padding-bottom: 60px
     margin-bottom: 30px
     position: relative
+    
     &::before
       content: ''
       position: absolute
@@ -75,11 +81,13 @@
     min-height: 80px
     padding-left: 57px
     position: relative
+
     &:not(:last-child)
       border-right: 1px solid #ebeef3
       padding-right: 28px
       margin-right: 28px
       height: 100%
+
     &::before
       content: ''
       position: absolute
@@ -136,6 +144,7 @@
       line-height: 1.1
 
     &__text
+
       &::before
         width: 280px
         right: 0
@@ -147,6 +156,7 @@
       margin: 0 auto
       padding-left: 0
       max-width: 200px
+
       &:not(:last-child)
         border-right: none
         border-bottom: 1px solid #ebeef3
@@ -173,6 +183,7 @@
     padding-top: 85px
     margin-bottom: 15px
     position: relative
+
     &::before
       content: ''
       position: absolute
@@ -182,6 +193,7 @@
       right: 0
       margin: 0 auto
       width: 67px
+
     &::after
       content: ''
       position: absolute
@@ -248,8 +260,9 @@
     font-size: 14px
     border: none
     border-radius: 5px
-    @extend %Poppins-SemiBold-600
+    @extend %Poppins-600
     position: relative
+
     &::before
       content: ''
       position: absolute

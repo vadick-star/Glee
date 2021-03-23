@@ -1,7 +1,13 @@
-%line-clamp
-  display: -webkit-box
-  -webkit-box-orient: vertical
+.sr-only 
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
   overflow: hidden
+  clip: rect(0, 0, 0, 0)
+  white-space: nowrap
+  border: 0
   
 body
   font-size: 16px
@@ -14,19 +20,16 @@ body
   max-width: 1200px
   margin: 0 auto
   padding: 0 15px
-
-.container-big
-  max-width: 1800px
-  margin: 0 auto
-  padding: 0 15px
+  &--big
+    max-width: 1800px
 
 .title
-  @extend %dmsans-700
+  font-weight: 700
   font-size: 36px
   color: #191919
 
 .btn
-  display: block
+  display: inline-block
   text-decoration: none
   border: none
   @extend %rubik-500
@@ -36,42 +39,47 @@ body
   position: relative
   outline: transparent
   transition: border-color .4s, background-color .4s
+
   &:focus
-    background-color: $focus !important
+    background-color: $focus 
+
   &:hover
-    background-color: $btn-dark !important
+    background-color: $btn-dark 
+
   &:active
-    background-color: $active !important
+    background-color: $active 
 
 .round-btn
   border-radius: 50%
   border: none
   width: 50px
   height: 50px
+  background-color: #edf1f4
   outline: transparent
   cursor: pointer
+  display: flex
+  align-items: center 
+  justify-content: center
   transition: background-color .4s
-  font-size: 0
 
   path
     transition: fill .4s
 
   &:focus
-    background-color: $focus !important
+    background-color: $focus 
+    
   &:hover
-    background-color: #a3bbc8 !important
+    background-color: #a3bbc8 
+
     path
-      fill: #fff !important
+      fill: #fff 
+
   &:active
-    background-color: $active !important
+    background-color: $active 
 
-.mix
-  &__top
-    padding: 65px 0 50px 0
-
-  &__title
-    margin-bottom: 10px
-    text-align: center
+.mixer
+  text-align: center
+  margin-bottom: 76px
 
   &__btn
     border: none
@@ -79,19 +87,22 @@ body
     color: #8b8b8b
     transition: color .3s
     outline: transparent
+
     &:focus
       color: $focus
+
     &:hover
       color: #1a1a1a
+
     &:active
       color: $active
 
-  &__filter
-    text-align: center
-    margin-bottom: 76px !important
-
   &__item
     display: inline-block
+
+    @include _575
+      padding: 10px
+
     &:not(:last-child)
       margin-right: 10px
 

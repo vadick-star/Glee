@@ -7,10 +7,47 @@
     border-bottom: 1px solid #dae4e9
     padding-bottom: 75px
 
+    @include _767
+      display: grid
+      grid-template-columns: 230px 270px
+      margin: 0 30px
+
+    @include _575
+      display: block
+      text-align: center
+
   &__content
     margin-top: 17px
 
-  .logo__img
+    &--services
+      margin-right: 180px
+
+      @include _1200
+        margin-right: 0
+
+      @include _991
+        margin-left: -70px
+
+      @include _767
+        margin-left: 0
+
+    &--account
+      margin-right: 220px
+
+      @include _1200
+        margin-right: 0
+
+    &--newsletter
+      @include _991
+        width: 240px
+
+    @include _991
+      margin-right: 0
+
+    @include _575
+      margin: 0 auto 
+
+  &__logo
     display: inline-block
     margin-bottom: 20px
 
@@ -33,6 +70,9 @@
   &__list
     max-width: 200px
 
+    @include _575
+      margin: 0 auto 
+
   &__title
     text-transform: uppercase
     color: #1f2044
@@ -52,11 +92,14 @@
     color: #8d8d8d
     border-bottom: 1px solid transparent
     transition: border-color .1s, color .1s
+    
     &:focus
       color: $focus
+
     &:hover
       border-color: #000
       color: #000
+
     &:active
       color: $active
 
@@ -69,42 +112,9 @@
     font-style: normal
     color: $footer-word
 
-  .footer-services
-    margin-right: 180px
-
-  .footer-account
-    margin-right: 220px
-
-  .subscribe
-    &__label-email
-      font-size: 0
-
-    &__email
-      @extend %dmsans-400
-      font-size: 12px
-      width: 170px
-      border: none
-      color: #234969
-      padding: 1.9px 16px 0px 16px
-      background-color: #fef7f0
-      min-height: 38px
-      outline: transparent
-      border-radius: 0px
-      border-bottom: 1px solid transparent 
-      &:placeholder
-        @extend %dmsans-400
-        color: #234969
-      &:focus
-        border-color: $focus
-
-    &__btn
-      min-width: 100px
-      @extend %dmsans-400
-      font-size: 14px
-      display: inline
-      background-color: #a3bbc8
-      margin-left: -5px
-      min-height: 38px
+    @include _575
+      margin-right: auto
+      margin-left: auto
 
   &__bottom
     display: flex
@@ -117,18 +127,31 @@
     line-height: 2.3
     @extend %rubik-400
 
+    @include _575
+      width: 140px
+
   &__menu-item
     position: relative
+
     &:not(:last-child)
       margin-right: 30px
+
     &:not(:first-child)::before
+
       content: '|'
       position: absolute
       left: -17px
       color: $footer-word
 
+      @include _575
+        display: none
+
   &__menu-list
     display: flex
+
+    @include _575
+      margin-right: 20px
+      display: block
 
   &__menu-link
     text-decoration: none
@@ -140,78 +163,55 @@
     outline: transparent
     border-bottom: 1px solid transparent
     transition: border-color .1s, color .1s
+
     &:focus
       color: $focus
+
     &:hover
       border-color: #000
       color: #000
+      
     &:active
       color: $active
-  
-  @media(max-width: 1200px)
 
-    .footer-services
-      margin-right: 0
+.subscribe
+  &__email
+    font-weight: 400
+    font-size: 12px
+    width: 170px
+    border: none
+    color: #234969
+    padding: 1.9px 16px 0px 16px
+    background-color: #fef7f0
+    min-height: 38px
+    outline: transparent
+    border-radius: 0px
+    border-bottom: 1px solid transparent
 
-    .footer-account
-      margin-right: 0
+    &:placeholder
+      font-weight: 400
+      color: #234969
+      
+    &:focus
+      border-color: $focus
 
-  @media(max-width: 991px)
-
-    .footer-services
-      margin-left: -70px
-
-    .footer-newsletter
-      width: 240px
-
-    .subscribe
-
-      &__email
-        width: 160px
-
-      &__btn
-        min-width: 50px
+    @include _991
+      width: 160px
     
-    &__content
-      margin-right: 0
-
-  @media(max-width: 767px)
-
-    .footer-services
-      margin-left: 0
-    
-
-    &__inner
-      display: grid
-      grid-template-columns: 230px 270px
-      margin: 0 30px
-
-  @media(max-width: 575px)
-
-    &__content,
-    &__list
-      margin: 0 auto 
-
-    &__copy
-      width: 140px
-
-    &__menu-list
-      margin-right: 20px
-      display: block
-
-    &__menu-item::before
-      display: none
-
-    &__inner
-      display: block
-      text-align: center
-
-    &__text
-      margin-right: auto
-      margin-left: auto
-    
-    .subscribe__email
+    @include _575
       width: 130px
 
-    .subscribe__btn
+  &__btn
+    min-width: 100px
+    font-weight: 400
+    font-size: 14px
+    display: inline
+    background-color: #a3bbc8
+    margin-left: -5px
+    min-height: 38px
+
+    @include _991
       min-width: 50px
+
+    @include _575
+      min-width: 50px      

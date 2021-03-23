@@ -1,0 +1,65 @@
+.card
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 30px
+  text-align: center
+
+  &__content
+    position: absolute
+    bottom: 120px
+    width: 45px
+    z-index: 10
+    height: 45px
+    transform: scale(0)
+    background-color: rgb(255, 255, 255)
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    opacity: 0
+    transition: transform .3s, opacity .6s, background-color .4s
+
+    path
+      fill: #a3bbc8
+  
+    &--cart
+      right: 0
+      left: 0
+      margin: 0 auto
+
+    &--search
+      left: 49px
+      transform: translateX(-250%)
+
+      @include _991
+        left: 25px
+
+    &--heart
+      right: 49px
+      transform: translateX(100px)
+
+      @include _991
+        right: 25px
+
+    @include _991
+      transform: translateX(0%)
+      transform: scale(1)
+      opacity: 1
+      bottom: 80px
+      
+  &__img
+    display: inline-block
+    max-height: 200px
+
+  &__title
+    @extend %dmsans-500
+    -webkit-line-clamp: 1
+    @extend %line-clamp
+    font-size: 16px
+    font-weight: 600
+    line-height: 2.5
+    color: #243f4d
+    padding-top: 50px
+
+  &__price
+    color: #a3bbc8
+    -webkit-line-clamp: 1
+    @extend %line-clamp  
