@@ -10,14 +10,11 @@
     margin-right: 145px
 
     @include _1200
-       margin-right: 0
+      margin-right: 0
 
     @include _991
       position: relative
       z-index: 3
-
-  .logo__img
-    max-height: 100px
 
 .menu 
   &__list
@@ -152,6 +149,9 @@
   &
     button:first-child
       margin-right: 20px
+      svg
+        width: 16px
+        height: 16px
 
       @include _1200
         margin-right: 10px
@@ -233,7 +233,7 @@
       right: 22px
 
       @include _991
-         right: 12px
+        right: 12px
 
     &--cart
       right: 36px

@@ -1,4 +1,4 @@
-.lamps
+.card-furniture
   margin-right: 90px
   display: flex
   align-items: center
@@ -17,6 +17,7 @@
     margin-right: 13px
     max-width: 240px
     max-height: 450px
+    object-fit: cover
 
     @include _1550
       height: 270px
@@ -30,6 +31,7 @@
     @include _767
       margin: 0 auto
       margin-top: 10px
+
   &__title
     max-width: 250px
     margin-top: 10px
@@ -69,9 +71,12 @@
       padding: 12px 0 12px 27px
 
     svg
+      width: 22px
+      height: 9px
+      fill: #436372
       margin-left: 35px
 
-    path
+    svg
       transition: fill .4s
 
     &:hover
@@ -79,5 +84,5 @@
       background-color: $btn-dark
       color: #fff
 
-      path
+      svg
         fill: #fff

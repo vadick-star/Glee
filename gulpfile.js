@@ -8,6 +8,7 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const svgSprite = require('gulp-svg-sprite');
+const  fileinclude  =  require ( 'gulp-file-include');
 
 function browsersync() {
   browserSync.init({
@@ -87,11 +88,20 @@ function sprite() {
     .pipe(dest('app/img/icons'));
 }
 
+function include() {
+  return src('app/html/**.html')
+    .pipe(fileinclude({
+      prefix: '@@',
+    }))
+    .pipe(dest('app'));
+}
+
 function watching() {
   watch(['app/sass/**/*.sass'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
-  // watch('app/img/**.svg', sprite);
+  watch('app/img/**.svg', sprite);
+  watch('app/html/parts/**.html', include);
 }
 
 exports.styles = styles;
@@ -101,6 +111,7 @@ exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.sprite = sprite;
+exports.include = include;
 
-exports.default =  parallel(styles, scripts, browsersync, watching);
+exports.default =  parallel(styles, scripts, include, browsersync, watching);
 exports.build = series(cleanDist, images, build);

@@ -38,6 +38,10 @@
       bottom: 0
       right: 0
 
+      @include _767
+        margin: 0
+        top: 9px
+
     &:focus
       color: $focus
 
@@ -49,6 +53,9 @@
 
     @include _575
       font-size: 18px
+
+    @include _767
+      min-height: 45px
 
   &__items
     @include _1200
@@ -156,6 +163,7 @@
     border-top-right-radius: 5px
     width: 370px
     height: 250px
+    object-fit: cover
 
     @include _575
       width: 290px
