@@ -1,0 +1,111 @@
+.team
+  padding-top: 120px
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+
+    @include _1200
+      display: block
+
+  &__box
+    max-width: 320px
+
+    @include _1200
+      max-width: 700px
+      margin: 0 auto 50px auto
+
+  &__title
+    margin-top: -16px
+    color: #243f4d
+    margin-bottom: 10px
+
+  &__text
+    color: #243f4d
+    margin-bottom: 35px
+    @extend %rubik-400
+
+  &__btn
+    background-color: #a3bbc8
+    max-width: 170px
+    padding: 12px 0 12px 18px
+    font-size: 14px
+    border: none
+    border-radius: 5px
+    @extend %Poppins-600
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      background-image: url('../img/icons/team-btn-arrow.svg')
+      width: 15px
+      height: 11px
+      top: 20px
+      right: 26px
+
+  &__content
+    @include _1200
+      display: flex
+      justify-content: center
+
+  &__items
+    display: grid
+    grid-template-columns: 370px 370px 
+    grid-gap: 40px 30px
+
+    @include _991
+      grid-template-columns: 280px
+
+  &__img
+    width: 370px
+    height: 318px
+    object-fit: cover
+
+    @include _991
+      width: 280px
+
+  &__inner
+    padding: 25px 0
+    position: relative
+    display: flex
+    background-color: #fff
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05)
+    max-width: 325px
+    margin-top: -47px
+
+    @include _991
+      padding: 5px 0
+    
+  &__info
+    padding-left: 25px
+
+    @include _991
+      padding-left: 10px
+
+  &__info-title
+    color: #436372
+    font-size: 22px
+    line-height: 1.2
+    margin-bottom: 5px
+
+  &__info-text
+    color: #565872
+    @extend %rubik-400
+
+  &__instagram,
+  &__google
+    height: 41px
+    width: 41px
+    margin-top: 11px
+    background-color: #f6f6f6
+    svg
+      fill: #888  
+
+  &__instagram
+    margin-left: 57px
+    margin-right: 7px
+
+    @include _991
+      margin-left: 25px
+      margin-right: 20px

@@ -40,7 +40,8 @@ body
   @extend %rubik-500
   color: #fff
   background-color: #a3bbc8
-  min-width: 200px
+  max-width: 200px
+  width: 100%
   padding: 15px 0 15px 27px
   cursor: pointer
   border-radius: 0px
@@ -52,7 +53,7 @@ body
     background-color: $focus 
 
   &:hover
-    background-color: $btn-dark 
+    background-color: $btn-dark
 
   &:active
     background-color: $active 
@@ -123,3 +124,63 @@ body
 
   .mixitup-control-active
     color: #1a1a1a
+
+.filter
+  &__title
+    display: inline-block
+    text-transform: uppercase
+    color: $dark
+    font-size: 18px
+    position: relative
+    
+    &::before
+      content: ''
+      position: absolute
+      width: 38px
+      height: 3px
+      background-color: #a3bbc8
+      top: 0
+      bottom: 0
+      right: -55px
+      margin: auto 0
+
+.pagination
+  display: flex
+  justify-content: center
+  margin-top: 110px
+
+  &--start
+    margin-top: 75px
+    justify-content: flex-start
+
+  &__list
+    display: flex
+
+  &__item
+    width: 51px
+    height: 51px
+    border: 1px solid #a3bbc8
+    margin-right: 15px
+
+    &--active
+      background-color: #a3bbc8
+
+      .pagination__link
+        color: #fff
+
+    &--next
+      width: 74px
+
+  &__link
+    text-decoration: none
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+    @extend %rubik-400
+    color: $dark
+
+  &__next
+    width: 50px
+    height: 50px
+    border: 1px solid #000

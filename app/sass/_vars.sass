@@ -3,11 +3,19 @@ $focus: #b42b2b
 $footer-word: #7b7b7b
 $btn-dark: #6c7c85
 $active: #b69b83
+$dark: #243f4d
 
 %line-clamp
   display: -webkit-box
   -webkit-box-orient: vertical
   overflow: hidden
+
+%checkbox-hidden
+  width: 1px
+  height: 1px
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  position: absolute
   
 %dmsans-700
   font-family: 'DMSans'

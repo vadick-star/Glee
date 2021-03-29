@@ -3,6 +3,52 @@ var mixitupEl2 = document.querySelector('[data-ref="mixitup-2"]');
 var screen = window.matchMedia('(max-width: 575px)');
 
 $(function(){
+
+  $('.shop__filter-btn').on('click', function(){
+    $('.shop__filter-btn').removeClass('shop__filter-btn--active');
+    $(this).addClass('shop__filter-btn--active');
+  });
+
+  $('.button-list').on('click', function(){
+    $('.shop__items').addClass('products__items--list');
+    $('.card-products__item').addClass('products__item--list');
+    $('.pagination').addClass('pagination--start');
+  });
+
+  $('.button-grid').on('click', function(){
+    $('.shop__items').removeClass('products__items--list');
+    $('.card-products__item').removeClass('products__item--list');
+    $('.pagination').removeClass('pagination--start');
+  });
+
+  $('.card-products__star').rateYo({
+    starWidth: "18px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    spacing: "13px",
+    readOnly: true
+  });
+
+  $('.recent__star').rateYo({
+    starWidth: "11px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    spacing: "8px",
+    readOnly: true
+  });
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    onStart: function (data){
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    }
+  });
+
   $('.main-slider__list').slick({
     arrows: false,
     dots: true

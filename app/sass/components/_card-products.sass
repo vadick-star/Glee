@@ -1,9 +1,148 @@
 .card-products
-  position: absolute
-  left: 0
-  right: 0
-  bottom: 30px
-  text-align: center
+  &__items
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-gap: 40px 37px
+
+    @include _1200
+      grid-template-columns: 250px 250px
+
+    @include _575
+      grid-template-columns: 250px
+
+  &__item
+    overflow: hidden
+    position: relative
+    min-height: 380px
+    border-radius: 10px
+    background-color: rgb(255, 255, 255)
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05)
+    transition: box-shadow .5s
+    
+    &:hover
+      box-shadow: 0px 0px 0px 5px rgba(37, 37, 37, 0.2)
+
+      @include _575
+        box-shadow: none
+
+    &:hover .round-btn
+      opacity: 1
+      transform: translateX(0%)
+      transform: scale(1)      
+
+    &.products__item--list
+      border-radius: 0 
+      height: 500px
+      box-shadow: none
+
+      &:not(:nth-child(4))
+        margin-bottom: 42px
+
+      &:nth-child(1n+5)
+        display: none
+
+      &:hover 
+        box-shadow: none
+
+      .round-btn
+        display: none
+
+      .card-products
+        position: relative
+
+        &__article
+          position: absolute
+          top: 0
+          bottom: 0
+
+        &__wrapper
+          display: flex
+          align-items: center
+
+        &__img-box
+          display: flex
+          justify-content: center
+          align-items: center
+          height: 500px
+          width: 365px
+          margin-right: 57px
+          border: 2px solid #f2f2f2
+
+        &__img
+          display: none
+
+        &__img-list
+          display: block
+
+        &__info
+          text-align: start
+
+        &__title
+          display: none
+
+        &__title-list
+          display: block
+          @extend %rubik-400
+          font-size: 40px
+          color: #333333
+          line-height: 1.5
+          margin-bottom: 8px
+
+        &__star
+          margin-left: -4px
+          display: block
+          margin-bottom: 30px
+
+        &__price
+          @extend %rubik-400
+          text-align: start
+          font-size: 30px
+          line-height: 1.5
+          color: #333333
+          margin-bottom: 17px
+
+        &__num-grid
+          display: none
+
+        &__num-list
+          display: block
+
+        &__text
+          @extend %rubik-400
+          display: block
+          margin-left: 5px
+          max-width: 410px
+          color: $dark
+          margin-bottom: 30px
+          
+        &__btn
+          display: inline-block
+          border-radius: 0
+          position: relative
+          background-color: #fff
+          box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05)
+          margin-right: 10px
+          
+          &:last-child
+            margin-right: 0
+
+          &:hover
+            background-color: #a3bbc8
+
+          svg
+            position: absolute
+            right: 0
+            left: 0
+            top: 0
+            bottom: 0
+            margin: auto
+          
+  &__article
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 30px
+    text-align: center
 
   &__list
     display: flex
@@ -13,7 +152,7 @@
     left: 0
     bottom: 90px
     
-  &__item
+  &__item-img
     width: 45px
     height: 45px
 
@@ -65,7 +204,10 @@
     display: inline-block
     object-fit: cover
     max-height: 195px
-    max-width: 236px
+    max-width: 250px
+
+  &__img-list
+    display: none
 
   &__title
     @extend %dmsans-500
@@ -76,8 +218,23 @@
     line-height: 2.5
     color: #243f4d
     padding-top: 50px
+    
+  &__title-list
+    display: none
+
+  &__star
+    display: none
 
   &__price
     color: #a3bbc8
     -webkit-line-clamp: 1
     @extend %line-clamp  
+  
+  &__num-list
+    display: none
+
+  &__text
+    display: none
+
+  &__btn
+    display: none

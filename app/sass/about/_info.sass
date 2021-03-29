@@ -1,0 +1,69 @@
+.info
+  padding: 85px 0 71px
+  background-color: $default
+
+  &__items
+    display: flex
+    justify-content: space-around
+
+    @include _767
+      display: grid
+      grid-template-columns: 150px 150px
+
+  &__item
+    text-align: center
+    &:first-child
+      @include _767
+        margin-bottom: 60px
+
+  &__title
+    display: block
+    font-size: 36px
+    line-height: 0.9
+    color: #243f4d
+    padding-top: 85px
+    margin-bottom: 15px
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      background-repeat: no-repeat
+      top: 0
+      left: 0
+      right: 0
+      margin: 0 auto
+      width: 67px
+
+    &::after
+      content: ''
+      position: absolute
+      background-color: rgba(118, 164, 189, 0.5);
+      border-radius: 50%
+      height: 35px
+      width: 35px
+      top: 30px
+      right: 44px
+
+    &--satisfied::before
+      background-image: url('../img/icons/satisfied.svg')
+      height: 57px
+      top: 4px
+
+    &--products::before
+      background-image: url('../img/icons/products.svg')
+      height: 57px
+      top: 12px
+
+    &--daily::before
+      background-image: url('../img/icons/daily.svg')
+      height: 64px
+
+    &--brands::before
+      background-image: url('../img/icons/brands.svg')
+      height: 64px
+      
+  &__text
+    font-size: 18px
+    line-height: 1.8
+    color: #243f4d
