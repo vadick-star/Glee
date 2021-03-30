@@ -1,5 +1,16 @@
 .header 
   padding: 50px 0
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  z-index: 10
+  background-color: #fff
+  transform: translateY(0)
+  transition: transform .3s
+
+  &.out
+    transform: translateY(-100%)
 
   &__inner 
     display: flex
@@ -53,16 +64,12 @@
     @extend %rubik-500
     text-decoration: none
     font-size: 15px
-    line-height: 0.8
     color: #436372
     transition: color .2s
-    outline: transparent
+    @extend %effects
 
     &--active
       color: $default
-
-    &:focus
-      color: $focus
 
     &:hover
       color: $default
@@ -161,12 +168,10 @@
     background-color: $default
     border: none
     border-radius: 0
-    outline: transparent
     transition: background-color .4s
     position: relative
     background-repeat: no-repeat
-    &:focus
-      background-color: $focus
+    @extend %effects
 
     &:hover
       background-color: #f8be8b

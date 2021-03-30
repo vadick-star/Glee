@@ -1,7 +1,7 @@
 .footer
   padding: 80px 0 20px
 
-  &__inner
+  &__wrapper
     display: flex
     justify-content: space-between
     border-bottom: 1px solid #dae4e9
@@ -10,11 +10,11 @@
     @include _767
       display: grid
       grid-template-columns: 230px 270px
-      margin: 0 30px
 
     @include _575
       display: block
-      text-align: center
+      max-width: 250px
+      margin: 0 auto
 
   &__content
     margin-top: 17px
@@ -47,8 +47,7 @@
       margin-right: 0
 
     @include _575
-      margin: 0 auto 
-
+      
   &__logo
     display: inline-block
     margin-bottom: 20px
@@ -90,17 +89,14 @@
     font-size: 14px
     line-height: 2.3
     text-decoration: none
-    outline: transparent
     color: #8d8d8d
     border-bottom: 1px solid transparent
     transition: border-color .1s, color .1s
+    @extend %effects
 
     @include _767
       min-height: 45px
-    
-    &:focus
-      color: $focus
-
+  
     &:hover
       border-color: #000
       color: #000
@@ -118,8 +114,7 @@
     color: $footer-word
 
     @include _575
-      margin-right: auto
-      margin-left: auto
+      margin: 0 auto 20px
 
   &__bottom
     display: flex
@@ -165,12 +160,9 @@
     @extend %rubik-400
     font-size: 14px
     line-height: 2.3
-    outline: transparent
     border-bottom: 1px solid transparent
     transition: border-color .1s, color .1s
-
-    &:focus
-      color: $focus
+    @extend %effects
 
     &:hover
       border-color: #000

@@ -1,3 +1,10 @@
+body
+  font-size: 16px
+  line-height: 1.9
+  background-color: #fff
+  color: #1a1a1a
+  @extend %dmsans-700
+  
 .sr-only 
   position: absolute
   width: 1px
@@ -8,13 +15,6 @@
   clip: rect(0, 0, 0, 0)
   white-space: nowrap
   border: 0
-  
-body
-  font-size: 16px
-  line-height: 1.9
-  background-color: #fff
-  color: #1a1a1a
-  @extend %dmsans-700
 
 .container
   max-width: 1200px
@@ -31,7 +31,7 @@ body
 .logo__img
   max-height: 50px
   width: 149px
-  object-fit: cover
+  object-fit: contain
 
 .btn
   display: inline-block
@@ -43,20 +43,16 @@ body
   max-width: 200px
   width: 100%
   padding: 15px 0 15px 27px
-  cursor: pointer
   border-radius: 0px
   position: relative
-  outline: transparent
   transition: border-color .4s, background-color .4s
-
-  &:focus
-    background-color: $focus 
+  @extend %effects
 
   &:hover
-    background-color: $btn-dark
+    background-color: $btn-dark 
 
   &:active
-    background-color: $active 
+    background-color: $active
 
 .round-btn
   border-radius: 50%
@@ -64,21 +60,17 @@ body
   width: 50px
   height: 50px
   background-color: #edf1f4
-  outline: transparent
-  cursor: pointer
   display: flex
   align-items: center 
   justify-content: center
   transition: background-color .4s
+  @extend %effects
 
   svg
     fill: #26414f
     width: 20px
     height: 20px
     transition: fill .4s
-
-  &:focus
-    background-color: $focus 
     
   &:hover
     background-color: #a3bbc8 
@@ -98,11 +90,7 @@ body
     background-color: transparent
     color: #8b8b8b
     transition: color .3s
-    outline: transparent
-
-    &:focus
-      color: $focus
-
+    @extend %effects
     &:hover
       color: #1a1a1a
 

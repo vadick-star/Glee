@@ -9,6 +9,7 @@
 @import components/card-products
 @import components/card-furniture
 @import components/card-collection
+@import components/card-article
 @import components/partners
 @import components/articles
 @import components/footer
@@ -50,19 +51,16 @@
     color: #b3b3b3
     font-size: 18px
 
-  &__items
+  .card-products
     display: grid
     grid-template-columns: 270px 270px 270px
     grid-gap: 40px 30px
 
-    &.products__items--list
+    &.card-products--list
       display: block
 
   &__item
     position: relative
-
-.filters
- 
 
 .filter
   display: block
