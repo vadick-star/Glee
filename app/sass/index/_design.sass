@@ -19,13 +19,15 @@
     grid-gap: 27px 37px
 
     @include _1200
-      grid-template-columns: 340px 340px
+      grid-template-columns: 365px 365px
       
     @include _767
-      grid-template-columns: 360px 
+      grid-template-columns: 365px 
 
     @include _575
-      grid-template-columns: 250px 
+      max-width: 365px
+      width: 100%
+      grid-template-columns: 1fr 
 
   &__item
     &:hover

@@ -19,9 +19,14 @@ $dark: #243f4d
 
 %effects
   outline: transparent
-
   &:focus
     background-color: $focus 
+
+%effects-color
+  outline: transparent
+  transition: border-color .3s, color .3s
+  &:focus
+    color: $focus
   
 %dmsans-700
   font-family: 'DMSans'

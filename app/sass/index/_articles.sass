@@ -17,14 +17,17 @@
       line-height: 1.2
 
   &__top-link
+    display: inline-block
     padding-right: 28px
     margin-top: 12px
     text-decoration: none
     color: #262626
     border-bottom: 1px solid transparent
     position: relative
-    transition: border-color .2s
-    @extend %effects
+    @extend %effects-color
+
+    @include _575
+      height: 45px
 
     &::before
       content: ''

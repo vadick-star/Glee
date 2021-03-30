@@ -1,8 +1,7 @@
 var mixitupEl1 = document.querySelector('[data-ref="mixitup-1"]');
 var mixitupEl2 = document.querySelector('[data-ref="mixitup-2"]');
 var screen = window.matchMedia('(max-width: 575px)');
-var header =  $('.header'), 
-            scrolPrev = 0;
+var header =  $('.header'), scrollPrev = 0;
 
 $(function(){
 
@@ -50,6 +49,22 @@ $(function(){
     readOnly: true
   });
 
+  if (screen.matches) {
+    $('.partners__list').slick({
+      arrows: false,
+      slidesToShow: 1,
+      autoplay: true,
+      autoplaySpeed: 5000
+    });
+  } else {
+    $('.partners__list').slick({
+      arrows: false,
+      slidesToShow: 5,
+      autoplay: true,
+      autoplaySpeed: 5000
+    });
+  }  
+
   $('.filter-price__input').ionRangeSlider({
     type: "double",
     onStart: function (data){
@@ -82,19 +97,3 @@ $(function(){
   var mixer1 = mixitup(mixitupEl1, config);
   var mixer2 = mixitup(mixitupEl2, config);
 });
-
-if (screen.matches) {
-  $('.partners__list').slick({
-    arrows: false,
-    slidesToShow: 1,
-    autoplay: true,
-    autoplaySpeed: 5000
-  });
-  } else {
-  $('.partners__list').slick({
-    arrows: false,
-    slidesToShow: 5,
-    autoplay: true,
-    autoplaySpeed: 5000
-  });
-}
