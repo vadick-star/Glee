@@ -1,4 +1,20 @@
 .products
+  &__list
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-gap: 40px 37px
+
+    @include _1200
+      grid-template-columns: 250px 250px
+
+    @include _575
+      grid-template-columns: 250px
+
+    &:hover .card-products__btn
+      opacity: 1
+      transform: translateX(0%)
+      transform: scale(1)      
+
   &__top
     padding: 65px 0 50px 0
 

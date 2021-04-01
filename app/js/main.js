@@ -1,9 +1,59 @@
 var mixitupEl1 = document.querySelector('[data-ref="mixitup-1"]');
 var mixitupEl2 = document.querySelector('[data-ref="mixitup-2"]');
 var screen = window.matchMedia('(max-width: 575px)');
+var screenBtn = window.matchMedia('(min-width: 991px)');
 var header =  $('.header'), scrollPrev = 0;
 
+
 $(function(){
+
+  $('.filter__btn').on('click', function(){
+    $('.filter__btn-menu').toggleClass('filter__btn-menu--active');
+    $('.filter-category').toggleClass('filter-category--active');
+    $('.filter-brand').toggleClass('filter-brand--active');
+    $('.filter-price').toggleClass('filter-price--active');
+    $('.recent').toggleClass('recent--active');
+    $('.shop__content').toggleClass('shop__content--active');
+    $('.partners-transfrom').toggleClass('partners-transfrom--active');
+  });
+
+  $(window).resize(function(){
+    if(screenBtn.matches){
+      $('.filter__btn-menu').removeClass('filter__btn-menu--active');
+      $('.filter-category').removeClass('filter-category--active');
+      $('.filter-brand').removeClass('filter-brand--active');
+      $('.filter-price').removeClass('filter-price--active');
+      $('.recent').removeClass('recent--active');
+      $('.shop__content').removeClass('shop__content--active');
+      $('.partners-transfrom').removeClass('partners-transfrom--active');
+    } else {
+      $('.filter__btn-menu').addClass('filter__btn-menu--active');
+      $('.filter-category').addClass('filter-category--active');
+      $('.filter-brand').addClass('filter-brand--active');
+      $('.filter-price').addClass('filter-price--active');
+      $('.recent').addClass('recent--active');
+      $('.shop__content').addClass('shop__content--active');
+      $('.partners-transfrom').addClass('partners-transfrom--active');
+    }
+  });
+
+  $('.filter__btn-menu').addClass('filter__btn-menu--active');
+  $('.filter-category').addClass('filter-category--active');
+  $('.filter-brand').addClass('filter-brand--active');
+  $('.filter-price').addClass('filter-price--active');
+  $('.recent').addClass('recent--active');
+  $('.shop__content').addClass('shop__content--active');
+  $('.partners-transfrom').addClass('partners-transfrom--active');
+
+  if(screenBtn.matches){
+    $('.filter__btn-menu').removeClass('filter__btn-menu--active');
+    $('.filter-category').removeClass('filter-category--active');
+    $('.filter-brand').removeClass('filter-brand--active');
+    $('.filter-price').removeClass('filter-price--active');
+    $('.recent').removeClass('recent--active');
+    $('.shop__content').removeClass('shop__content--active');
+    $('.partners-transfrom').removeClass('partners-transfrom--active');
+  } 
 
   $(window).scroll(function() {
 	  var scrolled = $(window).scrollTop();
@@ -22,14 +72,14 @@ $(function(){
   });
 
   $('.button-list').on('click', function(){
+    $('.shop__items').addClass('shop__items--list');
     $('.card-products').addClass('card-products--list');
-    $('.card-products__item').addClass('card-products__item--list');
     $('.pagination').addClass('pagination--start');
   });
 
   $('.button-grid').on('click', function(){
+    $('.shop__items').removeClass('shop__items--list');
     $('.card-products').removeClass('card-products--list');
-    $('.card-products__item').removeClass('card-products__item--list');
     $('.pagination').removeClass('pagination--start');
   });
 
@@ -49,21 +99,20 @@ $(function(){
     readOnly: true
   });
 
-  if (screen.matches) {
-    $('.partners__list').slick({
-      arrows: false,
-      slidesToShow: 1,
-      autoplay: true,
-      autoplaySpeed: 5000
-    });
-  } else {
-    $('.partners__list').slick({
-      arrows: false,
-      slidesToShow: 5,
-      autoplay: true,
-      autoplaySpeed: 5000
-    });
-  }  
+  $('.partners__list').slick({
+    arrows: false,
+    slidesToShow: 5,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
 
   $('.filter-price__input').ionRangeSlider({
     type: "double",

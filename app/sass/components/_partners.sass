@@ -1,9 +1,5 @@
 .partners
-  background-color: #fef7f0
-  
-  .slick-track
-    display: flex
-    align-items: center
+  background-color: #fef7f0       
 
   .slick-slide
     text-align: center
@@ -18,9 +14,17 @@
 
     @include _575
       max-width: 600px
+      margin: auto
+
+  .slick-track
+    display: flex
+    align-items: center
 
   &__item
-    margin: 55px 0 80px
+    margin: 69px auto 69px
+
+  &__item-small
+    margin: auto
     
   &__img
     margin: 0 auto
@@ -36,3 +40,7 @@
 
     @include _575
       transform: scale(1.5)    
+
+.partners-transfrom
+  &--active
+    margin-top: -750px

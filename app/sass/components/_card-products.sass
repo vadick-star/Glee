@@ -1,177 +1,197 @@
 .card-products
-  display: grid
-  grid-template-columns: 1fr 1fr 1fr 1fr
-  grid-gap: 40px 37px
+  overflow: hidden
+  background-color: #fff
+  min-height: 380px
+  max-width: 270px
+  border-radius: 10px
+  width: 100%
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05)
+  transition: box-shadow .5s
 
-  @include _1200
-    grid-template-columns: 250px 250px
-
-  @include _575
-    grid-template-columns: 250px
-
-  &__item
-    overflow: hidden
-    position: relative
-    min-height: 380px
-    border-radius: 10px
-    background-color: rgb(255, 255, 255)
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05)
-    transition: box-shadow .5s
+  &:hover 
+    box-shadow: 0px 0px 0px 5px rgba(37, 37, 37, 0.2)
     
-    &:hover
-      box-shadow: 0px 0px 0px 5px rgba(37, 37, 37, 0.2)
+    & .card-products__item
+      transform: scale(1)
 
-      @include _575
-        box-shadow: none
+    & .card-products__item:first-child
+      transform: translateX(0)
 
-    &:hover .card-products__btn
-      opacity: 1
-      transform: translateX(0%)
-      transform: scale(1)      
+    & .card-products__item:last-child
+      transform: translateX(0)
 
-    &.card-products__item--list
-      display: block
-      border-radius: 0 
-      height: 500px
-      box-shadow: none
+  &.card-products--list
+    max-width: 1000px
+    box-shadow: none
+    border-radius: 0 
 
-      &:not(:nth-child(4))
-        margin-bottom: 42px
+    .card-products
+      position: relative
 
-      &:nth-child(1n+5)
+      &__article
+        position: absolute
+        top: 0
+        bottom: 0
+
+        @include _767
+          position: static
+
+      &__wrapper
+        display: flex
+        align-items: center
+
+        @include _767
+          display: block
+
+      &__img-box
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 500px
+        max-width: 365px
+        width: 100%
+        margin-right: 57px
+        border: 2px solid #f2f2f2
+
+        @include _767
+          margin: 0 auto
+          height: 400px
+
+      &__img
         display: none
 
-      &:hover 
-        box-shadow: none
+      &__img-list
+        display: block
+        @include _767
+          max-width: 250px
 
-      .round-btn
+      &__btn
         display: none
 
-      .card-products
+      &__info
+        text-align: start
+
+      &__title
+        display: none
+
+      &__title-list
+        text-decoration: none
+        display: block
+        @extend %rubik-400
+        font-size: 40px
+        color: #333333
+        line-height: 1.5
+        margin-bottom: 8px
+
+        @include _767
+          text-align: center
+
+      &__star
+        margin-left: -4px
+        display: block
+        margin-bottom: 30px
+
+        @include _767
+          margin-left: auto
+          margin-right: auto
+
+      &__price
+        @extend %rubik-400
+        text-align: start
+        font-size: 30px
+        line-height: 1.5
+        color: #333333
+        margin-bottom: 17px
+
+        @include _767
+          text-align: center
+
+      &__num-grid
+        display: none
+
+      &__num-list
+        display: block
+
+      &__text
+        @extend %rubik-400
+        display: block
+        margin-left: 5px
+        max-width: 410px
+        color: $dark
+        margin-bottom: 30px
+
+        @include _767
+          margin-left: auto
+          margin-right: auto
+
+      &__button-box
+        @include _767
+          text-align: center
+          
+      &__button
+        display: inline-block
+        border-radius: 0
         position: relative
+        background-color: #fff
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05)
+        margin-right: 10px
+          
+        &:last-child
+          margin-right: 0
 
-        &__article
+        &:hover
+          background-color: #a3bbc8
+
+        svg
           position: absolute
+          right: 0
+          left: 0
           top: 0
           bottom: 0
-
-        &__wrapper
-          display: flex
-          align-items: center
-
-        &__img-box
-          display: flex
-          justify-content: center
-          align-items: center
-          height: 500px
-          max-width: 365px
-          width: 100%
-          margin-right: 57px
-          border: 2px solid #f2f2f2
-
-        &__img
-          display: none
-
-        &__img-list
-          display: block
-
-        &__info
-          text-align: start
-
-        &__title
-          display: none
-
-        &__title-list
-          display: block
-          @extend %rubik-400
-          font-size: 40px
-          color: #333333
-          line-height: 1.5
-          margin-bottom: 8px
-
-        &__star
-          margin-left: -4px
-          display: block
-          margin-bottom: 30px
-
-        &__price
-          @extend %rubik-400
-          text-align: start
-          font-size: 30px
-          line-height: 1.5
-          color: #333333
-          margin-bottom: 17px
-
-        &__num-grid
-          display: none
-
-        &__num-list
-          display: block
-
-        &__text
-          @extend %rubik-400
-          display: block
-          margin-left: 5px
-          max-width: 410px
-          color: $dark
-          margin-bottom: 30px
-          
-        &__button
-          display: inline-block
-          border-radius: 0
-          position: relative
-          background-color: #fff
-          box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05)
-          margin-right: 10px
-          
-          &:last-child
-            margin-right: 0
-
-          &:hover
-            background-color: #a3bbc8
-
-          svg
-            position: absolute
-            right: 0
-            left: 0
-            top: 0
-            bottom: 0
-            margin: auto
-          
-  &__article
-    position: absolute
-    left: 0
-    right: 0
-    bottom: 30px
-    text-align: center
+          margin: auto
 
   &__list
+    position: absolute
     display: flex
     justify-content: center
-    position: absolute
-    right: 0
     left: 0
-    bottom: 90px
+    right: 0
+    bottom: 110px
     
-  &__item-img
-    width: 45px
-    height: 45px
-
-    svg
-      fill: #a3bbc8
-      &:hover
-        fill: #fff
-    
-  &__btn
-    position: absolute
-    width: 45px
-    height: 45px
-    background-color: rgb(255, 255, 255)
-    box-shadow: 0px 0px 6px 0px rgba(37, 37, 37, 0.2)
+  &__item
+    border-radius: 50%
     transform: scale(0)
-    opacity: 0
-    transition: transform .3s, opacity .6s, background-color .4s
+    box-shadow: 0px 0px 6px 0px rgba(37, 37, 37, 0.2)
+    transition: transform .3s, background-color .4s
     @extend %effects
+
+    &:not(:last-child)
+      margin-right: 16px
+
+      @include _991
+        margin-right: 25px
+
+    &:first-child
+      transform: translateX(-110px) scale(0)
+
+      @include _991
+        left: 25px
+        transform: translateX(0%)
+
+    &:last-child
+      transform: translateX(110px) scale(0)
+
+      @include _991
+        right: 25px
+        transform: translateX(0%)
+      
+    @include _991
+      transform: scale(1)
+      opacity: 1
 
     &:hover
       background-color: #a3bbc8 
@@ -179,29 +199,24 @@
     &:active
       background-color: $active
 
+    svg
+      fill: #a3bbc8
+      &:hover
+        fill: #fff
+    
+  &__btn
+    width: 45px
+    height: 45px
+    background-color: rgb(255, 255, 255)
+    transition: transform .3s, background-color .4s
+    
     @include _991
       transform: scale(1)
-      opacity: 1
 
-    &--search
-      left: 49px
-      transform: translateX(-250%)
-
-      @include _991
-        left: 25px
-        transform: translateX(0%)
-
-    &--heart
-      right: 49px
-      transform: translateX(100px)
-
-      @include _991
-        right: 25px
-        transform: translateX(0%)
-          
   &__img
     display: inline-block
-    object-fit: cover
+    object-fit: contain
+    margin: 0 auto
     max-height: 195px
     max-width: 250px
 
@@ -209,6 +224,7 @@
     display: none
 
   &__title
+    text-align: center
     @extend %dmsans-500
     -webkit-line-clamp: 1
     @extend %line-clamp
@@ -225,6 +241,8 @@
     display: none
 
   &__price
+    margin-bottom: 28px
+    text-align: center
     color: #a3bbc8
     -webkit-line-clamp: 1
     @extend %line-clamp  

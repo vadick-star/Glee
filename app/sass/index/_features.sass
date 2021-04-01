@@ -13,6 +13,21 @@
 
   &__item
     position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    &::before
+      content: ''
+      position: absolute
+      background-repeat: no-repeat
+      left: 0
+      min-width: 60px
+      min-height: 60px
+
+    &:not(:last-child)
+      border-right: 1px solid #e8e4df
+      height: 170px
 
     @include _991
       border-right: none 
@@ -23,23 +38,12 @@
       min-width: 240px
 
     &--support
-      height: 170px
-      display: flex
-      flex-direction: column
-      justify-content: center
-      border-right: 1px solid #e8e4df
       padding-right: 145px
       padding-left: 75px
       margin-left: 145px
 
       &::before
-        content: ''
-        position: absolute
         background-image: url('../img/icons/support.svg')
-        background-repeat: no-repeat
-        min-width: 50px
-        min-height: 60px
-        left: 0
         top: 45px
 
         @include _991
@@ -58,22 +62,11 @@
         padding: 0 
 
     &--delivery
-      display: flex
-      flex-direction: column
-      justify-content: center
-      height: 170px
-      border-right: 1px solid #e8e4df
       padding-right: 155px
       padding-left: 80px
 
       &::before
-        content: ''
-        position: absolute
         background-image: url('../img/icons/delivery.svg')
-        background-repeat: no-repeat
-        min-width: 60px
-        min-height: 60px
-        left: 0
         top: 65px
 
         @include _991
@@ -94,13 +87,7 @@
       margin-right: 160px
 
       &::before
-        content: ''
-        position: absolute
         background-image: url('../img/icons/pay.svg')
-        background-repeat: no-repeat
-        min-width: 60px
-        min-height: 60px
-        left: 0
         top: 10px
 
         @include _991

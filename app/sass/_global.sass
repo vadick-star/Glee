@@ -40,8 +40,7 @@ body
   @extend %rubik-500
   color: #fff
   background-color: #a3bbc8
-  max-width: 200px
-  width: 100%
+  min-width: 200px
   padding: 15px 0 15px 27px
   border-radius: 0px
   position: relative
@@ -84,7 +83,9 @@ body
 .mixer
   text-align: center
   margin-bottom: 76px
-
+  white-space: nowrap
+  overflow: auto
+  
   &__btn
     border: none
     background-color: transparent
@@ -113,25 +114,6 @@ body
   .mixitup-control-active
     color: #1a1a1a
 
-.filter
-  &__title
-    display: inline-block
-    text-transform: uppercase
-    color: $dark
-    font-size: 18px
-    position: relative
-    
-    &::before
-      content: ''
-      position: absolute
-      width: 38px
-      height: 3px
-      background-color: #a3bbc8
-      top: 0
-      bottom: 0
-      right: -55px
-      margin: auto 0
-
 .pagination
   display: flex
   justify-content: center
@@ -140,6 +122,9 @@ body
   &--start
     margin-top: 75px
     justify-content: flex-start
+
+    @include _1200
+      justify-content: center
 
   &__list
     display: flex

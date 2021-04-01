@@ -15,9 +15,9 @@ function browsersync() {
     server: {
       baseDir: 'app/'
     },
+    // tunnel: true,
     port: 3000,
     notify: false,
-    // tunnel: true
   });
 }
 

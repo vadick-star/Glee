@@ -81,25 +81,29 @@
 </header>
 
 <main class="main">
-  <section class="top">
+
+  <div class="top">
     <h2 class="top__title">
       About Us
     </h2>
+    
     <div class="breadcrumbs">
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">
-            Home
-          </a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">
-            About Us
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
+  <ul class="breadcrumbs__list">
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="#">
+        Home
+      </a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="#">
+        About Us
+      </a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+
   <section class="experience">
     <div class="container">
       <div class="experience__inner" style="background-image: url('img/experience-bg.jpg')">
@@ -125,25 +129,25 @@
           </div>
           <ul class="experience__items">
             <li class="experience__item experience__item--projects">
-              <h3 class="experience__item-num">
+              <span class="experience__item-num">
                 520+
-              </h3>
+              </span>
               <span class="experience-item-text">
                 Projects
               </span>
             </li>
             <li class="experience__item experience__item--revenue">
-              <h3 class="experience__item-num">
+              <span class="experience__item-num">
                 <span>$</span>4<span>M</span>
-              </h3>
+              </span>
               <span class="experience-item-text">
                 Revenue
               </span>
             </li>
             <li class="experience__item experience__item--awards">
-              <h3 class="experience__item-num">
+              <span class="experience__item-num">
                 250
-              </h3>
+              </span>
               <span class="experience-item-text">
                 Awards
               </span>
@@ -225,13 +229,13 @@
                   </span>
                 </div>
                 <a class="team__instagram round-btn" href="#">
-                  <span class="sr-only">instagram</span>
+                  <span class="sr-only">go to instagram</span>
                   <svg>
                     <use xlink:href="img/icons/sprite.svg#instagram"></use>
                   </svg>
                 </a>
                 <a class="team__google round-btn" href="#">
-                  <span class="sr-only">google+</span>
+                  <span class="sr-only">go to google+</span>
                   <svg>
                     <use xlink:href="img/icons/sprite.svg#google"></use>
                   </svg>
@@ -250,13 +254,13 @@
                   </span>
                 </div>
                 <a class="team__instagram round-btn" href="#">
-                  <span class="sr-only">instagram</span>
+                  <span class="sr-only">go to instagram</span>
                   <svg>
                     <use xlink:href="img/icons/sprite.svg#instagram"></use>
                   </svg>
                 </a>
                 <a class="team__google round-btn" href="#">
-                  <span class="sr-only">google+</span>
+                  <span class="sr-only">go to google+</span>
                   <svg>
                     <use xlink:href="img/icons/sprite.svg#google"></use>
                   </svg>
@@ -275,13 +279,13 @@
                   </span>
                 </div>
                 <a class="team__instagram round-btn" href="#">
-                  <span class="sr-only">instagram</span>
+                  <span class="sr-only">go to instagram</span>
                   <svg>
                     <use xlink:href="img/icons/sprite.svg#instagram"></use>
                   </svg>
                 </a>
                 <a class="team__google round-btn" href="#">
-                  <span class="sr-only">google+</span>
+                  <span class="sr-only">go to google+</span>
                   <svg>
                     <use xlink:href="img/icons/sprite.svg#google"></use>
                   </svg>
@@ -300,13 +304,13 @@
                   </span>
                 </div>
                 <a class="team__instagram round-btn" href=#>
-                  <span class="sr-only">instagram</span>
+                  <span class="sr-only">go to instagram</span>
                   <svg>
                     <use xlink:href="img/icons/sprite.svg#instagram"></use>
                   </svg>
                 </a>
                 <a class="team__google round-btn" href=#>
-                  <span class="sr-only">google+</span>
+                  <span class="sr-only">go to google+</span>
                   <svg>
                     <use xlink:href="img/icons/sprite.svg#google"></use>
                   </svg>
@@ -331,18 +335,18 @@
       <div class="articles__items">
         <ul class="articles__list">
           <li class="articles__item">
-            <article class="articles__item-box">
-              <a class="articles__link" href="#">
-                <img class="articles__img" src="img/articles-1.jpg" alt="">
-                <div class="articles__wrapper">
-                  <div class="articles__content">
-                    <div class="articles__inner">
-                      <h3 class="articles__item-title">
+            <article class="card-article">
+              <a class="card-article__link" href="#">
+                <img class="card-article__img" src="img/articles-1.jpg" alt="">
+                <div class="card-article__wrapper">
+                  <div class="card-article__content">
+                    <div class="card-article__inner">
+                      <h3 class="card-article__item-title">
                         Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                       </h3>
-                      <span class="articles__date">
+                      <span class="card-article__date">
                         <time>28 January, 2020</time>
-                        <span class="articles__admin">By amdin</span>
+                        <span class="card-article__admin">By amdin</span>
                       </span>
                     </div>
                   </div>
@@ -351,18 +355,18 @@
             </article>
           </li>
           <li class="articles__item">
-            <article class="articles__item-box">
-              <a class="articles__link" href="#">
-                <img class="articles__img" src="img/articles-2.jpg" alt="">
-                <div class="articles__wrapper">
-                  <div class="articles__content">
-                    <div class="articles__inner">
-                      <h3 class="articles__item-title">
+            <article class="card-article">
+              <a class="card-article__link" href="#">
+                <img class="card-article__img" src="img/articles-2.jpg" alt="">
+                <div class="card-article__wrapper">
+                  <div class="card-article__content">
+                    <div class="card-article__inner">
+                      <h3 class="card-article__item-title">
                         Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
                       </h3>
-                      <span class="articles__date">
+                      <span class="card-article__date">
                         <time>28 January, 2020</time>
-                        <span class="articles__admin">By amdin</span>
+                        <span class="card-article__admin">By amdin</span>
                       </span>
                     </div>
                   </div>
@@ -371,18 +375,18 @@
             </article>
           </li>
           <li class="articles__item">
-            <article class="articles__item-box">
-              <a class="articles__link" href="#">
-                <img class="articles__img" src="img/articles-3.jpg" alt="">
-                <div class="articles__wrapper">
-                  <div class="articles__content">
-                    <div class="articles__inner">
-                      <h3 class="articles__item-title">
+            <article class="card-article">
+              <a class="card-article__link" href="#">
+                <img class="card-article__img" src="img/articles-3.jpg" alt="">
+                <div class="card-article__wrapper">
+                  <div class="card-article__content">
+                    <div class="card-article__inner">
+                      <h3 class="card-article__item-title">
                         Rncididunt ut labore et dolore magna aliqua. Ut enim
                       </h3>
-                      <span class="articles__date">
+                      <span class="card-article__date">
                         <time>28 January, 2020</time>
-                        <span class="articles__admin">By amdin</span>
+                        <span class="card-article__admin">By amdin</span>
                       </span>
                     </div>
                   </div>
@@ -394,66 +398,65 @@
       </div>
     </div>
   </section>
-</main>
 
-<div class="partners">
+  <div class="partners">
   <div class="container">
-    <div class="partners__slider">
-      <ul class="partners__list">
-        <li class="partners__item">
-          <a class="partners__link" href="#">
-            <img class="partners__img" src="img/icons/client-1.png" alt="logo">
-          </a>
-        </li>
-        <li class="partners__item">
-          <a class="partners__link" href="#">
-            <img class="partners__img" src="img/icons/client-2.png" alt="logo">
-          </a>
-        </li>
-        <li class="partners__item">
-          <a class="partners__link" href="#">
-            <img class="partners__img" src="img/icons/client-3.png" alt="logo">
-          </a>
-        </li>
-        <li class="partners__item">
-          <a class="partners__link" href="#">
-            <img class="partners__img" src="img/icons/client-4.png" alt="logo">
-          </a>
-        </li>
-        <li class="partners__item">
-          <a class="partners__link" href="#">
-            <img class="partners__img" src="img/icons/client-1.png" alt="logo">
-          </a>
-        </li>
-        <li class="partners__item">
-          <a class="partners__link" href="#">
-            <img class="partners__img" src="img/icons/client-2.png" alt="logo">
-          </a>
-        </li>
-        <li class="partners__item">
-          <a class="partners__link" href="#">
-            <img class="partners__img" src="img/icons/client-4.png" alt="logo">
-          </a>
-        </li>
-        <li class="partners__item">
-          <a class="partners__link" href="#">
-            <img class="partners__img" src="img/icons/client-5.png" alt="logo">
-          </a>
-        </li>
-        <li class="partners__item">
-          <a class="partners__link" href="#">
-            <img class="partners__img" src="img/icons/client-2.png" alt="logo">
-          </a>
-        </li>
-        <li class="partners__item">
-          <a class="partners__link" href="#">
-            <img class="partners__img" src="img/icons/client-1.png" alt="logo">
-          </a>
-        </li>
-      </ul>
-    </div>
+    <ul class="partners__list">
+      <li class="partners__item">
+        <a class="partners__link" href="#">
+          <img class="partners__img" src="img/icons/client-1.png" alt="logo">
+        </a>
+      </li>
+      <li class="partners__item">
+        <a class="partners__link" href="#">
+          <img class="partners__img" src="img/icons/client-2.png" alt="logo">
+        </a>
+      </li>
+      <li class="partners__item">
+        <a class="partners__link" href="#">
+          <img class="partners__img" src="img/icons/client-3.png" alt="logo">
+        </a>
+      </li>
+      <li class="partners__item">
+        <a class="partners__link" href="#">
+          <img class="partners__img" src="img/icons/client-4.png" alt="logo">
+        </a>
+      </li>
+      <li class="partners__item">
+        <a class="partners__link" href="#">
+          <img class="partners__img" src="img/icons/client-1.png" alt="logo">
+        </a>
+      </li>
+      <li class="partners__item">
+        <a class="partners__link" href="#">
+          <img class="partners__img" src="img/icons/client-2.png" alt="logo">
+        </a>
+      </li>
+      <li class="partners__item">
+        <a class="partners__link" href="#">
+          <img class="partners__img" src="img/icons/client-4.png" alt="logo">
+        </a>
+      </li>
+      <li class="partners__item">
+        <a class="partners__link" href="#">
+          <img class="partners__img" src="img/icons/client-5.png" alt="logo">
+        </a>
+      </li>
+      <li class="partners__item">
+        <a class="partners__link" href="#">
+          <img class="partners__img" src="img/icons/client-2.png" alt="logo">
+        </a>
+      </li>
+      <li class="partners__item">
+        <a class="partners__link" href="#">
+          <img class="partners__img" src="img/icons/client-1.png" alt="logo">
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
+
+</main>
 
 <footer class="footer">
   <div class="container">
