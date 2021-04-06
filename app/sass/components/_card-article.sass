@@ -7,7 +7,7 @@
   &:hover
     box-shadow: 0px 0px 0px 5px rgba(37, 37, 37, 0.2)
 
-    .card-article__inner::before
+    .card-article__news
       background-color: $btn-dark
 
     .card-article__date
@@ -41,33 +41,22 @@
     min-height: 175px
     border-bottom-left-radius: 5px
     border-bottom-right-radius: 5px
-    
-  &__inner
-    position: absolute
-    display: flex
-    flex-direction: column
-    justify-content: center
-    padding: 30px 0 0 30px
-    left: 0
-    right: 0
-    top: 0
-    bottom: 0
+    padding: 30px 30px 0 30px
 
-    &::before
-      content: 'News'
-      position: absolute
-      text-transform: uppercase
-      color: #fff
-      background-color: #a3bbc8
-      font-size: 14px
-      width: 103px
-      line-height: 1.9
-      text-align: center
-      left: 25px
-      padding: 2px 0
-      top: -17px
-      border-radius: 20px
-      transition: background-color .5s
+  &__news
+    position: absolute
+    text-transform: uppercase
+    color: #fff
+    background-color: #a3bbc8
+    font-size: 14px
+    width: 103px
+    line-height: 1.9
+    text-align: center
+    left: 25px
+    padding: 2px 0
+    top: -17px
+    border-radius: 20px
+    transition: background-color .5s
       
   &__img
     border-top-left-radius: 5px
@@ -95,7 +84,10 @@
     border-top: 1px solid #e0e0e0
     padding-top: 10px
     max-width: 314px
-    margin: auto 0 25px 0
+    position: absolute
+    bottom: 0
+    width: 100%
+    margin-bottom: 25px
     -webkit-line-clamp: 1
     @extend %line-clamp
     @extend %rubik-400
@@ -109,5 +101,33 @@
       margin-left: 15px
       margin-right: 15px
 
+  &__time
+    padding-left: 18px
+    position: relative
+    margin-right: 20px
+
+    &::before
+      content: ''
+      position: absolute
+      background-image: url('../img/sprite/sprite.svg#time-black')
+      background-repeat: no-repeat
+      width: 13px
+      height: 15px
+      left: 0
+      top: 0
+      bottom: 0
+
   &__admin 
-    margin-left: 30px
+    padding-left: 18px
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      background-image: url('../img/sprite/sprite.svg#admin-black')
+      background-repeat: no-repeat
+      width: 13px
+      height: 15px
+      left: 0
+      top: 0
+      bottom: 0

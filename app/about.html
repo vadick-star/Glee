@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glee | main</title>
+  <title>Glee | About</title>
   <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon.png">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -58,7 +58,7 @@
       <div class="user-nav">
         <button class="round-btn" type="button">
           <svg>
-            <use xlink:href="img/icons/sprite.svg#search"></use>
+            <use xlink:href="img/sprite/sprite.svg#search"></use>
           </svg>
           <span class="sr-only">open search</span>
         </button>
@@ -71,8 +71,9 @@
           <span class="user-nav__num user-nav__num--cart">0</span>
         </a>
         <button class="round-btn" type="button">
+          <span class="sr-only">open menu</span>
           <svg>
-            <use xlink:href="img/icons/sprite.svg#menu"></use>
+            <use xlink:href="img/sprite/sprite.svg#menu"></use>
           </svg>
         </button>
       </div>
@@ -82,77 +83,77 @@
 
 <main class="main">
 
-  <div class="top">
-    <h2 class="top__title">
-      About Us
-    </h2>
-    
-    <div class="breadcrumbs">
-  <ul class="breadcrumbs__list">
-    <li class="breadcrumbs__item">
-      <a class="breadcrumbs__link" href="#">
-        Home
-      </a>
-    </li>
-    <li class="breadcrumbs__item">
-      <a class="breadcrumbs__link" href="#">
-        About Us
-      </a>
-    </li>
-  </ul>
-</div>
-
+  <section class="top">
+  <h2 class="top__title">
+    About Us
+  </h2>
+  <div class="breadcrumbs">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#">
+          Home
+        </a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#">
+          About Us
+        </a>
+      </li>
+    </ul>
   </div>
+</section>
 
   <section class="experience">
     <div class="container">
-      <div class="experience__inner" style="background-image: url('img/experience-bg.jpg')">
-        <div class="experience__content">
-          <div class="experience__working">
-            <span class="experience__working-num">12</span>
-            <span class="experience__working-text">Years Experience Working</span>
+      <div class="experience__wrapper">
+        <div class="experience__inner" style="background-image: url('img/experience-bg.jpg')">
+          <div class="experience__content">
+            <div class="experience__working">
+              <span class="experience__working-num">12</span>
+              <span class="experience__working-text">Years Experience Working</span>
+            </div>
+            <h2 class="experience__title title">
+              Mission of our creative house
+            </h2>
+            <div class="experience__text">
+              <p>
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad
+                minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure
+                dolor
+                in
+                reprehenderit in voluptate velit esse cillum
+              </p>
+            </div>
+            <ul class="experience__items">
+              <li class="experience__item experience__item--projects">
+                <span class="experience__item-num">
+                  520+
+                </span>
+                <span class="experience__item-text">
+                  Projects
+                </span>
+              </li>
+              <li class="experience__item experience__item--revenue">
+                <span class="experience__item-num">
+                  <span>$</span>4<span>M</span>
+                </span>
+                <span class="experience-item-text">
+                  Revenue
+                </span>
+              </li>
+              <li class="experience__item experience__item--awards">
+                <span class="experience__item-num">
+                  250
+                </span>
+                <span class="experience__item-text">
+                  Awards
+                </span>
+              </li>
+            </ul>
           </div>
-          <h2 class="experience__title title">
-            Mission of our creative house
-          </h2>
-          <div class="experience__text">
-            <p>
-              consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad
-              minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-              irure
-              dolor
-              in
-              reprehenderit in voluptate velit esse cillum
-            </p>
-          </div>
-          <ul class="experience__items">
-            <li class="experience__item experience__item--projects">
-              <span class="experience__item-num">
-                520+
-              </span>
-              <span class="experience-item-text">
-                Projects
-              </span>
-            </li>
-            <li class="experience__item experience__item--revenue">
-              <span class="experience__item-num">
-                <span>$</span>4<span>M</span>
-              </span>
-              <span class="experience-item-text">
-                Revenue
-              </span>
-            </li>
-            <li class="experience__item experience__item--awards">
-              <span class="experience__item-num">
-                250
-              </span>
-              <span class="experience-item-text">
-                Awards
-              </span>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
@@ -217,8 +218,8 @@
         </div>
         <div class="team__content">
           <ul class="team__items">
-            <li class="team_item">
-              <img class="team__img" src="img/eliza.jpg" alt="">
+            <li class="team__item">
+              <img class="team__img" src="img/eliza.jpg" alt="eliza">
               <div class="team__inner">
                 <div class="team__info">
                   <h3 class="team__info-title">
@@ -228,22 +229,22 @@
                     Commodo tempor
                   </span>
                 </div>
-                <a class="team__instagram round-btn" href="#">
+                <a class="team__social round-btn team__social--left" href="#">
                   <span class="sr-only">go to instagram</span>
                   <svg>
-                    <use xlink:href="img/icons/sprite.svg#instagram"></use>
+                    <use xlink:href="img/sprite/sprite.svg#instagram"></use>
                   </svg>
                 </a>
-                <a class="team__google round-btn" href="#">
+                <a class="team__social round-btn" href="#">
                   <span class="sr-only">go to google+</span>
                   <svg>
-                    <use xlink:href="img/icons/sprite.svg#google"></use>
+                    <use xlink:href="img/sprite/sprite.svg#google"></use>
                   </svg>
                 </a>
               </div>
             </li>
-            <li class="team_item">
-              <img class="team__img" src="img/roscoe.jpg" alt="">
+            <li class="team__item">
+              <img class="team__img" src="img/roscoe.jpg" alt="roscoe">
               <div class="team__inner">
                 <div class="team__info">
                   <h3 class="team__info-title">
@@ -253,22 +254,22 @@
                     Commodo tempor
                   </span>
                 </div>
-                <a class="team__instagram round-btn" href="#">
+                <a class="team__social round-btn team__social--left" href="#">
                   <span class="sr-only">go to instagram</span>
                   <svg>
-                    <use xlink:href="img/icons/sprite.svg#instagram"></use>
+                    <use xlink:href="img/sprite/sprite.svg#instagram"></use>
                   </svg>
                 </a>
-                <a class="team__google round-btn" href="#">
+                <a class="team__social round-btn" href="#">
                   <span class="sr-only">go to google+</span>
                   <svg>
-                    <use xlink:href="img/icons/sprite.svg#google"></use>
+                    <use xlink:href="img/sprite/sprite.svg#google"></use>
                   </svg>
                 </a>
               </div>
             </li>
-            <li class="team_item">
-              <img class="team__img" src="img/ruby.jpg" alt="">
+            <li class="team__item">
+              <img class="team__img" src="img/ruby.jpg" alt="ruby">
               <div class="team__inner">
                 <div class="team__info">
                   <h3 class="team__info-title">
@@ -278,22 +279,22 @@
                     Commodo tempor
                   </span>
                 </div>
-                <a class="team__instagram round-btn" href="#">
+                <a class="team__social round-btn team__social--left" href="#">
                   <span class="sr-only">go to instagram</span>
                   <svg>
-                    <use xlink:href="img/icons/sprite.svg#instagram"></use>
+                    <use xlink:href="img/sprite/sprite.svg#instagram"></use>
                   </svg>
                 </a>
-                <a class="team__google round-btn" href="#">
+                <a class="team__social round-btn" href="#">
                   <span class="sr-only">go to google+</span>
                   <svg>
-                    <use xlink:href="img/icons/sprite.svg#google"></use>
+                    <use xlink:href="img/sprite/sprite.svg#google"></use>
                   </svg>
                 </a>
               </div>
             </li>
-            <li class="team_item">
-              <img class="team__img" src="img/marie.jpg" alt="">
+            <li class="team__item">
+              <img class="team__img" src="img/marie.jpg" alt="marie">
               <div class="team__inner">
                 <div class="team__info">
                   <h3 class="team__info-title">
@@ -303,16 +304,16 @@
                     Commodo tempor
                   </span>
                 </div>
-                <a class="team__instagram round-btn" href=#>
+                <a class="team__social round-btn team__social--left" href=#>
                   <span class="sr-only">go to instagram</span>
                   <svg>
-                    <use xlink:href="img/icons/sprite.svg#instagram"></use>
+                    <use xlink:href="img/sprite/sprite.svg#instagram"></use>
                   </svg>
                 </a>
-                <a class="team__google round-btn" href=#>
+                <a class="team__social round-btn" href=#>
                   <span class="sr-only">go to google+</span>
                   <svg>
-                    <use xlink:href="img/icons/sprite.svg#google"></use>
+                    <use xlink:href="img/sprite/sprite.svg#google"></use>
                   </svg>
                 </a>
               </div>
@@ -337,7 +338,7 @@
           <li class="articles__item">
             <article class="card-article">
               <a class="card-article__link" href="#">
-                <img class="card-article__img" src="img/articles-1.jpg" alt="">
+                <img class="card-article__img" src="img/articles-1.jpg" alt="room">
                 <div class="card-article__wrapper">
                   <div class="card-article__content">
                     <div class="card-article__inner">
@@ -357,7 +358,7 @@
           <li class="articles__item">
             <article class="card-article">
               <a class="card-article__link" href="#">
-                <img class="card-article__img" src="img/articles-2.jpg" alt="">
+                <img class="card-article__img" src="img/articles-2.jpg" alt="room">
                 <div class="card-article__wrapper">
                   <div class="card-article__content">
                     <div class="card-article__inner">
@@ -377,7 +378,7 @@
           <li class="articles__item">
             <article class="card-article">
               <a class="card-article__link" href="#">
-                <img class="card-article__img" src="img/articles-3.jpg" alt="">
+                <img class="card-article__img" src="img/articles-3.jpg" alt="room">
                 <div class="card-article__wrapper">
                   <div class="card-article__content">
                     <div class="card-article__inner">
@@ -486,7 +487,7 @@
           </div>
         </address>
       </div>
-      <div class="footer__content footer__content--services">
+      <div class="footer__content">
         <div class="footer__title">
           Services
         </div>
@@ -518,7 +519,7 @@
           </li>
         </ul>
       </div>
-      <div class="footer__content footer__content--account">
+      <div class="footer__content">
         <div class="footer__title">
           Account
         </div>

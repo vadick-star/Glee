@@ -1,0 +1,109 @@
+.blog-filter
+  max-width: 270px
+  width: 100%
+
+  @include _1200
+    order: 1
+    margin-bottom: 50px
+    max-width: 600px
+    display: grid
+    grid-template-columns: 1fr 1fr
+
+    & div:nth-child(2)
+      grid-column: 1 / 1
+    
+  @include _991
+    display: block
+    max-width: 270px
+
+  &__form
+    display: flex
+    margin-bottom: 50px
+
+    @include _1200
+      margin-bottom: 25px
+
+  &__search
+    max-width: 230px
+    width: 100%
+    height: 43px
+    padding: 0 10px
+    outline: transparent
+    border: 2px solid #ebf1f3
+    border-bottom-left-radius: 4px
+    border-top-left-radius: 4px
+    border-bottom-right-radius: 0
+    border-top-right-radius: 0
+
+    &:focus
+      border-color: $btn-dark
+
+  &__btn
+    border: none
+    background-color: #ebf1f3
+    border-radius: 4px
+    margin-left: -3px
+    min-width: 48px
+    height: 43px
+    position: relative
+    &:hover .blog-filter__search-btn
+      fill: #fff   
+
+  .filter-category
+    margin-bottom: 35px
+
+    @include _991
+      margin-bottom: 10px
+
+  &__search-btn
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    margin: auto
+    width: 18px
+    height: 18px
+    fill: #094074
+    transition: fill .4s
+
+  &__recent
+    .filter-title
+      margin-bottom: 25px
+
+  &__item
+    display: flex
+    align-items: center
+    &:not(:last-child)
+      margin-bottom: 24px
+
+  &__img
+    max-width: 70px
+    height: 70px
+    margin-right: 20px
+    object-fit: contain
+
+  &__text
+    display: block
+    @extend %rubik-400
+    font-size: 14px
+    line-height: 1.2
+    color: #333333
+
+  &__time
+    display: block
+    @extend %dmsans-400
+    font-size: 12px
+    padding-left: 19px
+    color: #9a9a9a
+    position: relative
+    
+    &::before
+      content: ''
+      position: absolute
+      background-image: url('../img/sprite/sprite.svg#recent-time')
+      background-repeat: no-repeat
+      width: 12px
+      height: 13px
+      top: 5px
+      left: 0

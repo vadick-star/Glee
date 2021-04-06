@@ -87,7 +87,7 @@ function sprite() {
         }
       }
     }))
-    .pipe(dest('app/img/icons'));
+    .pipe(dest('app/img/sprite'));
 }
 
 function include() {

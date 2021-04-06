@@ -1,5 +1,7 @@
 .footer
   padding: 80px 0 20px
+  font-size: 14px
+  @extend %rubik-400
 
   &__wrapper
     display: flex
@@ -16,50 +18,31 @@
       max-width: 250px
       margin: 0 auto
 
-  &__content
-    margin-top: 17px
-
-    &--services
-      margin-right: 180px
-      max-width: 120px
-
-      @include _1200
-        margin-right: 0
-
-      @include _991
-        margin-left: -70px
-
-      @include _767
-        margin-left: 0
-
-    &--account
-      margin-right: 220px
-      max-width: 100px
-
-      @include _1200
-        margin-right: 0
-
-    &--newsletter
-      @include _991
-        width: 240px
+  &__contacts
+    max-width: 310px
+    width: 100%
 
     @include _991
-      margin-right: 0
+      width: 200px
 
-    @include _575
+  &__content
+    margin-top: 17px
+    max-width: 300px
+    width: 100%
+
+    @include _991
+      width: 120px
+    
+    &--newsletter
+      @include _991
+        width: 200px
       
   &__logo
     display: inline-block
     margin-bottom: 20px
 
   &__address
-    font-size: 14px
-    @extend %rubik-400
     color: $footer-word
-
-  &__address .footer__link
-    display: inline-block
-    height: 25px
 
   &__address-text
     p:not(:last-child)
@@ -85,9 +68,6 @@
 
   &__link
     display: inline-block
-    @extend %rubik-400
-    padding-bottom: 0
-    font-size: 14px
     line-height: 2.3
     text-decoration: none
     color: #8d8d8d
@@ -105,10 +85,8 @@
       color: $active
 
   &__text
-    @extend %rubik-400
     margin-bottom: 40px
     max-width: 270px
-    font-size: 14px
     line-height: 1.7
     font-style: normal
     color: $footer-word
@@ -123,9 +101,7 @@
 
   &__copy
     color: $footer-word
-    font-size: 14px
     line-height: 2.3
-    @extend %rubik-400
 
     @include _575
       width: 140px
@@ -137,10 +113,10 @@
       margin-right: 30px
 
     &:not(:first-child)::before
-
       content: '|'
       position: absolute
       left: -17px
+      top: 3px
       color: $footer-word
 
       @include _575
@@ -158,8 +134,7 @@
     text-decoration: none
     position: relative
     color: #9e9e9e
-    @extend %rubik-400
-    font-size: 14px
+    
     line-height: 2.3
     border-bottom: 1px solid transparent
     @extend %effects-color
@@ -180,24 +155,27 @@
     font-weight: 400
     font-size: 12px
     width: 170px
+    padding: 0 16px
     border: none
     color: #234969
-    padding: 1.9px 16px 0px 16px
     background-color: #fef7f0
     min-height: 38px
     outline: transparent
     border-radius: 0px
-    border-bottom: 1px solid transparent
+    border: 1px solid transparent
 
     &:placeholder
       font-weight: 400
       color: #234969
       
     &:focus
-      border-color: $focus
+      border-color: $btn-dark
+
+    @include _1200
+      width: 140px
 
     @include _991
-      width: 160px
+      width: 130px
     
     @include _575
       width: 130px
@@ -206,14 +184,16 @@
     min-width: 100px
     font-weight: 400
     padding: 5px 0
-    font-size: 14px
     display: inline
     background-color: #a3bbc8
     margin-left: -5px
     min-height: 38px
 
+    @include _1200
+      min-width: 90px
+
     @include _991
-      min-width: 80px
+      min-width: 70px
 
     @include _575
       min-width: 70px      

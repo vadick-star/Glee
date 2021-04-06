@@ -4,8 +4,13 @@
   @include _575
     margin: 40px 0
 
-  &__inner
+  &__wrapper
     padding: 135px 0
+
+  &__inner
+    height: 677px
+    display: flex
+    align-items: center
     background-repeat: no-repeat
     background-position-x: left
 
@@ -29,13 +34,14 @@
   &__working-num
     @extend %rubik-700
     font-size: 140px
-    line-height: 0.2
+    line-height: 1
     color: #a3bbc8
     margin-right: 20px
 
   &__working-text
-    display: block
-    margin-top: -20px
+    display: flex
+    align-items: flex-end
+    margin-bottom: 15px
     color: #3d525e
     @extend %rubik-400
     max-width: 80px
