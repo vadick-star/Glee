@@ -1,0 +1,63 @@
+.product-slider
+  padding-top: 100px
+  padding-bottom: 120px
+
+  &__title
+    color: $dark
+    margin-bottom: 60px
+
+    @include _575
+      font-size: 30px
+
+  &__items
+    height: 320px
+    margin-top: -70px
+
+    .slick-list
+      padding: 70px 0
+      padding-left: 16px
+
+    .slick-slide
+      @include _575
+        margin-right: 13px
+
+    .slick-prev,
+    .slick-next
+      width: 50px
+      height: 50px
+      background-color: transparent
+      outline: transparent
+      border-radius: 4px
+      border: 2px solid #edf1f4
+      position: absolute
+      z-index: 10
+      top: -50px
+      right: 0
+      transition: border-color .2s
+
+      @include _575
+        top: 5px
+
+      &:hover
+        border-color: #a3bbc8
+
+      &:focus
+        border-color: #a3bbc8
+
+      img
+        display: inline-block
+
+    .slick-prev
+      right: 70px
+
+      @include _575
+        right: 50%
+
+    .slick-next
+      @include _575
+        right: 25%
+
+  &__item
+    @include _1200
+      display: flex !important
+      justify-content: center

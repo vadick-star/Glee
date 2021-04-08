@@ -1,0 +1,71 @@
+.login
+  padding-top: 115px
+  padding-bottom: 120px
+
+  &__label
+    color: #436372
+    @extend %rubik-400
+    font-size: 14px
+
+  &__input
+    display: block
+    width: 100%
+    min-height: 56px
+    border-radius: 0
+    outline: transparent
+    border: 2px solid #f6f6f6
+    padding: 0 15px
+    margin-top: 3px
+
+    &:focus
+      border-color: #6c7c85
+
+    &--text
+      margin-bottom: 26px
+
+    &--password
+      margin-bottom: 40px
+
+  &__btn
+    width: 100%
+    padding-left: 0
+    margin-bottom: 30px
+
+  &__checkbox
+    transform: translateY(2px)
+
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid #f6f6f6
+    padding-bottom: 25px
+    margin-bottom: 25px
+
+  &__lost
+    text-decoration: none
+    color: #436372
+    @extend %rubik-400
+    font-size: 14px
+
+  &__link-box
+    text-align: center
+    margin-bottom: 15px
+
+  &__link
+    text-decoration: none
+    color: #436372
+    @extend %rubik-400
+    font-size: 14px
+
+  &__create
+    display: block
+    width: 100%
+    padding-left: 0
+    background-color: transparent
+    border: 2px solid #a3bbc8
+    color: $dark
+    transition: color .4s, background-color .4s
+
+    &:hover
+      color: #fff

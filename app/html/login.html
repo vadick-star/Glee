@@ -1,0 +1,47 @@
+@@include('parts/head.html', {
+'page': 'Glee | Log in'
+})
+
+@@include('parts/header.html')
+
+<main class="main">
+
+  @@include('parts/breadcrumbs.html', {
+  'name': 'Log in'
+  })
+
+  <section class="login">
+    <div class="container container--small">
+      <form class="login__form" action="#">
+        <label class="login__label">
+          Username or email address*
+          <input class="login__input login__input--text" type="text" name="text">
+        </label>
+        <label class="login__label">
+          Password*
+          <input class="login__input login__input--password" type="password" name="password">
+        </label>
+        <button class="login__btn btn" type="submit">Login</button>
+        <div class="login__inner">
+          <label class="login__label">
+            <input class="login__checkbox" type="checkbox">
+            Remember me
+          </label>
+          <a class="login__lost" href="#">Lost your password?</a>
+        </div>
+        <div class="login__link-box">
+          <a class="login__link" href="#">Not registered?</a> 
+          <a class="login__link" href="#">No problem</a>
+        </div>
+        <button class="login__create btn">Create an account</button>
+      </form>
+    </div>
+  </section>
+
+  @@include('parts/partners.html')
+
+</main>
+
+@@include('parts/footer.html')
+
+@@include('parts/footer-scripts.html')

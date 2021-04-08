@@ -1,0 +1,263 @@
+.detalis
+  padding-top: 120px
+
+  &__inner
+    display: flex
+    margin-bottom: 100px
+
+    @include _1200
+      display: block
+
+  &__slider
+    width: 550px
+    display: flex
+    align-items: flex-start
+    margin-right: 67px
+
+    @include _1200
+      margin: 0 auto
+
+    @include _575
+      display: block
+      width: auto
+
+  &__list
+    width: 138px
+    height: 525px
+    margin-right: 23px
+    transform: translateY(-1px)
+
+    @include _575
+       margin: 0 auto 30px
+
+  &__list-item
+    border: 2px solid #f2f2f2
+    padding: 0 13px
+    cursor: pointer
+
+    @include _575
+      max-width: 140px
+
+  .slick-slide
+    height: 156px 
+    margin-bottom: 27px
+    outline: transparent
+
+  &__list-img
+    width: 109px
+    height: 155px
+    object-fit: contain
+
+  &__items
+    width: 385px
+    height: 525px
+    border: 2px solid #f2f2f2
+
+    @include _1200
+      width: 370px
+
+    @include _575
+      margin: 0 auto
+      width: 280px
+
+    .slick-list
+      height: 100%
+
+    .slick-track
+      height: 100%
+
+      div
+        height: 100%
+
+  &__item
+    height: 100%
+    @include _575
+
+      width: 290px !important
+
+  &__img
+    width: 225px
+    height: 100%
+    margin: auto
+    align-items: center
+    object-fit: contain
+
+  &__info
+    @extend %rubik-400
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    @include _1200
+      max-width: 540px
+      margin: 0 auto
+
+  &__title
+    @extend %rubik-400
+    font-size: 40px
+    color: #333
+
+  &__star
+    padding: 0
+    margin-bottom: 30px
+
+  &__price
+    font-size: 30px
+    line-height: 1.5
+    color: #333
+    margin-left: 3px
+    margin-bottom: 20px
+
+  &__text
+    max-width: 535px
+    color: $dark
+    margin-left: 3px
+    margin-bottom: 25px
+
+  &__form
+    margin-bottom: 50px
+    margin-left: 2px
+
+    @include _575
+      text-align: center
+
+  &__btn
+    margin-left: 15px
+    padding: 0
+    height: 53px
+    min-width: 208px
+    border-radius: 4px
+    text-transform: uppercase
+    @extend %rubik-400
+    font-size: 15px
+
+  &__info-list
+    margin-left: 4px
+
+  &__info-item
+    display: flex
+    color: $dark
+    @extend %rubik-400
+
+  &__info-title
+    margin-right: 5px
+
+.jq-number 
+  position: relative
+  width: 150px
+  @include _575
+    margin-bottom: 30px
+
+.jq-number__field
+  height: 53px
+  border: none
+  border-bottom-color: transparent
+  border-radius: 0
+  box-shadow: none
+  
+.jq-number__field input 
+  margin-left: 50px
+  height: 53px
+  width: 50px
+  text-align: center
+  border: 2px solid #a3bbc8
+  border-bottom-color: #a3bbc8
+  height: 100%
+  padding: 0
+  outline: transparent
+  color: #333
+  font-size: 15px
+  @extend %rubik-400
+  @include _575
+    margin-left: 0
+  
+.jq-number__spin 
+  position: absolute
+  top: 0
+  width: 50px
+  height: 53px
+  border: 2px solid #a3bbc8
+  border-bottom-color: #a3bbc8
+  border-radius: 0
+  background: transparent
+  box-shadow: none
+  text-shadow: none
+  cursor: pointer
+
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: #333
+    margin: auto
+    width: 9px
+    height: 1px
+
+.jq-number__spin.plus
+  right: 1px
+  border-left: none
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    margin: auto
+    height: 9px
+    width: 1px
+    background-color: #333
+  
+
+.jq-number__spin.minus
+  left: 1px
+  border-right: none
+
+.detalis-tabs
+  &__top
+    text-align: center
+    margin-bottom: 30px
+
+  &__link
+    display: inline-block
+    background-color: #edf1f4
+    text-align: center
+    max-width: 240px
+    width: 100%
+    padding: 11px 0
+    color: $dark
+    text-decoration: none
+    border-radius: 4px
+    font-size: 18px    
+    @extend %rubik-500
+
+    &--active
+      background-color: #a3bbc8
+      color: #fff
+
+    &:not(:last-child)
+      margin-right: 13px 
+
+    @include _575
+      &:not(:last-child)
+        margin-right: 0
+        margin-bottom: 20px
+
+  &__item
+    display: none
+    @extend %rubik-400
+    color: $dark
+
+    &.detalis-tabs__item--active
+      display: block
+
+    .comments
+      margin: 0 auto
+
+    &:nth-child(2)
+      max-width: 600px
+      margin: 0 auto
