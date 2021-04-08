@@ -103,6 +103,101 @@
   </div>
 </section>
 
+  <section class="contact">
+    <div class="container">
+      <span class="contact__subtitle">
+        Write Here
+      </span>
+      <h2 class="contact__title title">
+        Get In Touch
+      </h2>
+      <ul class="contact__items">
+        <li class="contact__item">
+          <a class="contact__link" href="#">
+            <div class="contact__icon">
+              <svg class="contact__icon-svg">
+                <use xlink:href="img/sprite/sprite.svg#address"></use>
+              </svg>
+            </div>
+            <h3 class="contact__item-title">
+              Address
+            </h3>
+            <div class="contact__text">
+              <p>
+                2416 Mapleview Drive
+              </p>
+              <p>
+                Tampa, FL 33634
+              </p>
+            </div>
+          </a>
+        </li>
+        <li class="contact__item">
+          <a class="contact__link" href="#">
+            <div class="contact__icon">
+              <svg class="contact__icon-svg">
+                <use xlink:href="img/sprite/sprite.svg#our-email"></use>
+              </svg>
+            </div>
+            <h3 class="contact__item-title">
+              Our Email
+            </h3>
+            <div class="contact__text">
+              <p>
+                Main Email : contact@website.com
+              </p>
+              <p>
+                Inquiries : Info@mail.com
+              </p>
+            </div>
+          </a>
+        </li>
+        <li class="contact__item">
+          <a class="contact__link" href="#">
+            <div class="contact__icon">
+              <svg class="contact__icon-svg">
+                <use xlink:href="img/sprite/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <h3 class="contact__item-title">
+              Our Phone
+            </h3>
+            <div class="contact__text">
+              <p>
+                Office Telephone : 0029129102320
+              </p>
+              <p>
+                Mobile : 000 2324 39493
+              </p>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="contact__content">
+        <form class="contact__form" action="#">
+          <label class="contact__label">
+            <div class="contact__input-box">
+              <div class="contact__input-text">
+                <input class="contact__input" type="text" placeholder="Name">
+              </div>
+              <div class="contact__input-email">
+                <input class="contact__input" type="email" placeholder="Email">
+              </div>
+            </div>
+            <div class="contact__input-textarea">
+              <textarea class="contact__textarea" name="message" placeholder="Message"></textarea>
+            </div>
+          </label>
+          <button class="contact__btn btn" type="submit">
+            Send message
+          </button>
+        </form>
+        <div class="contact__map">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="articles">
     <div class="container">
       <div class="articles__top">
@@ -241,6 +336,157 @@
 </div>
 
 </main>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
+  async></script>
+
+<script>
+  let map;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 29.71470222012474, lng: -95.40052107913046 },
+        zoom: 9,
+        styles: [
+          {
+            "featureType": "all",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#ffffff"
+              }
+            ]
+          },
+          {
+            "featureType": "all",
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "color": "#000000"
+              },
+              {
+                "lightness": 13
+              }
+            ]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry.fill",
+            "stylers": [
+              {
+                "color": "#000000"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry.stroke",
+            "stylers": [
+              {
+                "color": "#144b53"
+              },
+              {
+                "lightness": 14
+              },
+              {
+                "weight": 1.4
+              }
+            ]
+          },
+          {
+            "featureType": "landscape",
+            "elementType": "all",
+            "stylers": [
+              {
+                "color": "#08304b"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#0c4152"
+              },
+              {
+                "lightness": 5
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry.fill",
+            "stylers": [
+              {
+                "color": "#000000"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry.stroke",
+            "stylers": [
+              {
+                "color": "#0b434f"
+              },
+              {
+                "lightness": 25
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "geometry.fill",
+            "stylers": [
+              {
+                "color": "#000000"
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "geometry.stroke",
+            "stylers": [
+              {
+                "color": "#0b3d51"
+              },
+              {
+                "lightness": 16
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#000000"
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "elementType": "all",
+            "stylers": [
+              {
+                "color": "#146474"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [
+              {
+                "color": "#021019"
+              }
+            ]
+          }
+        ]
+      });
+    }
+</script>
 
 <footer class="footer">
   <div class="container">
